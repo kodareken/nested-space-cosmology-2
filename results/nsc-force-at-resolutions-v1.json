@@ -1,0 +1,262 @@
+{
+  "theorem_1_facet_bridge": {
+    "planck_length_m": 1.61625502392855e-35,
+    "planck_mass_kg": 2.176434342051127e-08,
+    "baryon_compton_wavelength_m": 2.1001941539004775e-16,
+    "n_1d_resolution_ratio": 1.2994200313732921e+19,
+    "f_star_facet_capacity": 1.6884924179341675e+38,
+    "n_star_baryon_capacity": 2.194060870685582e+57,
+    "f_nuclear_at_lambda_n_newton": 716766.9522726828,
+    "f_grav_at_lambda_n_newton": 4.245011376181547e-33,
+    "f_diluted_at_lambda_n_newton": 4.245011376181547e-33,
+    "force_ratio_nuclear_to_grav": 1.6884924179341675e+38,
+    "alpha_nuclear_bare": 1.0,
+    "alpha_grav_dimensionless": 5.922442940096098e-39,
+    "inv_f_star": 5.922442940096098e-39,
+    "relative_bridge_residual": 0.0,
+    "alpha_grav_bridge_residual": 0.0,
+    "r_star_km": 2.7290343533513632,
+    "r_ns_km": 10.916137413405453,
+    "geometric_mean_residual": 0.0
+  },
+  "theorem_2_strong_confinement": {
+    "v_star_100": 0.0,
+    "v_star_110": 0.0,
+    "e_star_111": 4.0,
+    "e_star_211": 5.656854249492381,
+    "e_star_222": 11.313708498984761,
+    "two_separate_triads_energy": 8.0,
+    "hard_core_barrier_delta_e": 3.313708498984761,
+    "gamma_core_per_axis": 1.1045694996615871,
+    "contact_energy_at_2r": 7.0,
+    "bare_binding_fraction": 0.125,
+    "nuclear_binding_base_mev": 7.796367971085723,
+    "nuclear_binding_barrier_mev": 8.61163026899978,
+    "chi_spaghetti": 0.34657359027997264,
+    "theta_spaghetti": 0.5,
+    "sigma_spaghetti_normalized": 0.5,
+    "lambda_3_snap_normalized": 8.0,
+    "r_hadron_fm": 0.840077661560191,
+    "sigma_phys_mev_per_fm": 1118.4268591966133
+  },
+  "theorem_3_atomic_em": {
+    "vol_3d_term_4pi3": 124.02510672119926,
+    "surf_2d_term_pi2": 9.869604401089358,
+    "loop_1d_term_pi": 3.141592653589793,
+    "alpha_geom_inv": 137.0363037758784,
+    "alpha_codata_inv": 137.035999177,
+    "relative_diff_ppm": 2.222765406287964,
+    "electron_compton_wavelength_m": 3.8615926772428334e-13,
+    "bohr_radius_geom_m": 5.2917838717735644e-11,
+    "bohr_radius_codata_m": 5.291772109405582e-11,
+    "rydberg_energy_ev_geom": 13.605632620216108,
+    "shells": [
+      {
+        "n": 1,
+        "r_n_over_a0": 1,
+        "angular_states_n2": 1,
+        "shell_capacity_2n2": 2,
+        "energy_ev": -13.605632620216108
+      },
+      {
+        "n": 2,
+        "r_n_over_a0": 4,
+        "angular_states_n2": 4,
+        "shell_capacity_2n2": 8,
+        "energy_ev": -3.401408155054027
+      },
+      {
+        "n": 3,
+        "r_n_over_a0": 9,
+        "angular_states_n2": 9,
+        "shell_capacity_2n2": 18,
+        "energy_ev": -1.5117369578017898
+      },
+      {
+        "n": 4,
+        "r_n_over_a0": 16,
+        "angular_states_n2": 16,
+        "shell_capacity_2n2": 32,
+        "energy_ev": -0.8503520387635067
+      },
+      {
+        "n": 5,
+        "r_n_over_a0": 25,
+        "angular_states_n2": 25,
+        "shell_capacity_2n2": 50,
+        "energy_ev": -0.5442253048086443
+      },
+      {
+        "n": 6,
+        "r_n_over_a0": 36,
+        "angular_states_n2": 36,
+        "shell_capacity_2n2": 72,
+        "energy_ev": -0.37793423945044746
+      }
+    ]
+  },
+  "theorem_4_weak_venting": {
+    "delta_m_np_mev": 1.2933323400000063,
+    "delta_m_np_over_me_exp": 2.5309882534983807,
+    "nsc_dressed_np_over_me": 2.535204773658315,
+    "q_beta_free_mev": 0.7823333900000063,
+    "single_bond_confine_mev": 7.796367971085723,
+    "deuteron_binding_mev": 2.224575,
+    "net_deuteron_stability_margin_mev": 0.9312426599999939,
+    "is_stable_in_deuteron": true,
+    "is_unstable_in_vacuum": true,
+    "bare_valve_conductance_e_minus_12": 6.14421235332821e-06,
+    "barrier_dressed_conductance": 1.0102560311647385e-05,
+    "g_fermi_dimless_exp": 1.026826e-05,
+    "rel_diff_g_fermi": 0.016137075644034653,
+    "tau_nuclear_s": 7.005493626862613e-25,
+    "tau_vent_estimate_s": 31904.540869486482
+  },
+  "theorem_5_nuclear_fission": {
+    "a_vol_mev": 15.592735942171446,
+    "a_surf_mev": 17.22326053799956,
+    "a_coul_mev": 0.7272230738713704,
+    "a_asym_mev": 23.38910391325717,
+    "r_0_fm": 1.1880492224250971,
+    "fissility_crit_z2_over_a": 47.36720040059117,
+    "neck_cubic_root_p_plus": 2.1038034027355366,
+    "binary_fission_release_fraction": 0.29289321881345254,
+    "sample_nuclei": [
+      {
+        "nucleus": "He-4",
+        "A": 4,
+        "Z": 2,
+        "B_per_A_mev": 6.013700777661825,
+        "Z2_over_A": 1.0,
+        "fissility_ratio_x": 0.02111165514412626
+      },
+      {
+        "nucleus": "C-12",
+        "A": 12,
+        "Z": 6,
+        "B_per_A_mev": 7.564349265686864,
+        "Z2_over_A": 3.0,
+        "fissility_ratio_x": 0.06333496543237878
+      },
+      {
+        "nucleus": "O-16",
+        "A": 16,
+        "Z": 8,
+        "B_per_A_mev": 7.9350851296666365,
+        "Z2_over_A": 4.0,
+        "fissility_ratio_x": 0.08444662057650504
+      },
+      {
+        "nucleus": "Fe-56",
+        "A": 56,
+        "Z": 26,
+        "B_per_A_mev": 8.793945365563912,
+        "Z2_over_A": 12.071428571428571,
+        "fissility_ratio_x": 0.2548478370969527
+      },
+      {
+        "nucleus": "Ni-62",
+        "A": 62,
+        "Z": 28,
+        "B_per_A_mev": 8.806204022742078,
+        "Z2_over_A": 12.64516129032258,
+        "fissility_ratio_x": 0.26696028440314495
+      },
+      {
+        "nucleus": "Pb-208",
+        "A": 208,
+        "Z": 82,
+        "B_per_A_mev": 7.723862835267285,
+        "Z2_over_A": 32.32692307692308,
+        "fissility_ratio_x": 0.682474851870697
+      },
+      {
+        "nucleus": "U-235",
+        "A": 235,
+        "Z": 92,
+        "B_per_A_mev": 7.501857153789671,
+        "Z2_over_A": 36.01702127659574,
+        "fissility_ratio_x": 0.7603789325101474
+      },
+      {
+        "nucleus": "U-238",
+        "A": 238,
+        "Z": 92,
+        "B_per_A_mev": 7.484840959345917,
+        "Z2_over_A": 35.563025210084035,
+        "fissility_ratio_x": 0.7507943241171624
+      },
+      {
+        "nucleus": "Cf-252",
+        "A": 252,
+        "Z": 98,
+        "B_per_A_mev": 7.3708656444922385,
+        "Z2_over_A": 38.111111111111114,
+        "fissility_ratio_x": 0.8045886349372564
+      }
+    ]
+  },
+  "room_floor_wavelength_m": 2.7601046284578545e+26,
+  "room_ceiling_wavelength_m": 1.61625502392855e-35,
+  "room_dynamic_range_b": 1.7077160396067985e+61,
+  "room_total_efolds_ln_b": 140.99284750102396,
+  "room_3axis_cascade_cycles": 46.99761583367465,
+  "resolution_tiers": [
+    {
+      "tier": 1,
+      "name": "Planck Ceiling (Pen Tip & 0-Valve Bounce)",
+      "scale_m": 1.61625502392855e-35,
+      "effective_coupling": 1.0,
+      "textbook_label": "Quantum Gravity / Singularity Cutoff",
+      "nsc_mechanism": "Minimum resolution step R(0) = ell_P > 0; 1D pen resets and draws out child room"
+    },
+    {
+      "tier": 2,
+      "name": "Two-Valve Neck Venting Scale",
+      "scale_m": 1.0456250992603125e-17,
+      "effective_coupling": 1.0102560311647385e-05,
+      "textbook_label": "Weak Nuclear Force (Beta Decay)",
+      "nsc_mechanism": "Balloon-in-balloon pressure relief across 4*chi_freeze = 12 e-fold valve barrier"
+    },
+    {
+      "tier": 3,
+      "name": "Baryon (1,1,1) Crystallization Scale",
+      "scale_m": 2.1001941539004775e-16,
+      "effective_coupling": 1.0,
+      "textbook_label": "Strong Nuclear Force (QCD Confinement)",
+      "nsc_mechanism": "Undivided 3-axis stretch E*=4, -2m_0/d shared flow, +3.3137 hard core & linear string"
+    },
+    {
+      "tier": 4,
+      "name": "Atomic 1D Phase-Loop Shell Scale",
+      "scale_m": 5.2917838717735644e-11,
+      "effective_coupling": 0.007297336344064641,
+      "textbook_label": "Electromagnetic Force & Atomic Shells",
+      "nsc_mechanism": "3D-to-1D impedance (4 pi^3 + pi^2 + pi)^-1 = 1/137.036; shells r_n = n^2 a_0, 2n^2"
+    },
+    {
+      "tier": 5,
+      "name": "Stellar Planck-Facet Saturation Scale",
+      "scale_m": 10916.137413405453,
+      "effective_coupling": 5.922442940096098e-39,
+      "textbook_label": "Newtonian / Relativistic Gravity & TOV Collapse",
+      "nsc_mechanism": "Nuclear pressure diluted over F_star = (lambda_n/ell_P)^2 = 1.688e38 Planck facets"
+    },
+    {
+      "tier": 6,
+      "name": "Galactic Virial Halo & 0-Valve Anchor Scale",
+      "scale_m": 3e+20,
+      "effective_coupling": 0.238134,
+      "textbook_label": "Cold Dark Matter Halo (Omega_DM = 23.81-23.88%)",
+      "nsc_mechanism": "3:1 exterior potential flow (75% surrounding) + two-sided 0-horizon anchor load"
+    },
+    {
+      "tier": 7,
+      "name": "Absolute-Zero Room Floor (Outer Birth 0-Valve)",
+      "scale_m": 2.7601046284578545e+26,
+      "effective_coupling": 0.708827,
+      "textbook_label": "Dark Energy / Cosmological Constant (w_DE = -1, Omega_DE = 70.88-71.14%)",
+      "nsc_mechanism": "Open-valve winding transfer dE_DE* = (-1/3 + 4/3) rho_DE dV_- = +rho_DE dV_-"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nsc-force-resolutions"
+version = "0.1.0"
+description = "Nested-Space Cosmology II: Force at Resolutions — Atoms, Subatoms, and the Single Thermodynamic Pressure Gradient"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Douglas Ek" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
