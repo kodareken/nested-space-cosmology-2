@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nsc-force-resolutions"
-version = "0.2.0"
-description = "Nested-Space Cosmology II: Force at Resolutions — Wave–Particle Duality, Helium at the Absolute-Zero Floor, and the Single Thermodynamic Pressure Gradient"
+version = "0.3.0"
+description = "Nested-Space Cosmology II: Force at Resolutions — Wave–Particle Duality, Helium at the Absolute-Zero Floor, Magnetism & Nucleon Moments, and the Single Thermodynamic Pressure Gradient"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11"

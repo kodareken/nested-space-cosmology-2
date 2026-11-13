@@ -1,23 +1,27 @@
 {
-  "bytes": 1873134,
+  "bytes": 2815153,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "6c7e947b0e161eed319790a1d08e6460020aaebd7be5e2935c986cf6019348a0",
+  "metadata_sha256": "3f2e7784109a6affcc9bd6fc5cf22c4221f28114e1a374caf449eabf0f046da5",
   "output": "paper/nested-space-cosmology-2.pdf",
-  "pages": 19,
-  "pdf_sha256": "a0cd70bcd6463cef0ffb2309ab016bd5d7c434413b05d0019f63a62314276fe8",
+  "pages": 24,
+  "pdf_sha256": "4f90362610c246c56bedfc9f35423aa8d5b57fc62524899a08100bdffccf4ea3",
   "schema": "NSC-PAPER-2-BUILD-v1",
   "scientific_build_inputs": [
     {
       "path": "paper/figures/nsc-force-at-resolutions-atlas.png",
-      "sha256": "4cb520a29d9532e3e527f50437800d56fcf2d231e4ee41380c58de3fde55e655"
+      "sha256": "3f6b28ff7b10a8bf5a8244bd1a0b70fc79b50ea9ff987726e1c1d25cf9018c17"
     },
     {
       "path": "paper/figures/nsc-helium-floor-and-fission-neck.png",
-      "sha256": "4e428f01ee658b8cc60c7e88b47211823963074212ec9b21d28d72f39b02a2c4"
+      "sha256": "ee927468fcb672f15e3080895a0bd25eb88ac35e2d7c053036825444f7d56791"
+    },
+    {
+      "path": "paper/figures/nsc-magnetism-and-nucleon-moments.png",
+      "sha256": "58090ea5de91327ffd8834453e1bfc54fadb7deb9e077465ca5751b700a5b708"
     },
     {
       "path": "results/nsc-force-at-resolutions-v1.json",
-      "sha256": "64619951aa8a0025cc892bfa73d9e05fa3918a0d5695432c9a26f089face3835"
+      "sha256": "c32751e8a399d2d486da44eace2e0848d9c3b03b78d8af0bf90a73d911415303"
     },
     {
       "path": "scripts/build_paper_2.py",
@@ -25,6 +29,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology-2.md",
-  "source_sha256": "17fce76e22bc2d59a6260a4ffc23c52f62ee04306e5210f9c6a671e37c4cfd71",
-  "version": "0.2.0 (2026-11-05)"
+  "source_sha256": "2ba190aed29f5ae0746dfdc2be20a89e25ab5f3b69fff09ca0d66e8eb9844c21",
+  "version": "0.3.0 (2026-11-14)"
 }

@@ -1,6 +1,6 @@
 # Nested-Space Cosmology II — Force at Resolutions (`THEORY.md`)
 
-**Foundation Edition II (`v0.2.0`)** · [Paper II Manuscript](paper/nested-space-cosmology-2.md) · [Paper II PDF](paper/nested-space-cosmology-2.pdf) · [Paper I (`v0.27.0`, Zenodo `10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258)
+**Foundation Edition II (`v0.3.0`)** · [Paper II Manuscript](paper/nested-space-cosmology-2.md) · [Paper II PDF](paper/nested-space-cosmology-2.pdf) · [Paper I (`v0.27.0`, Zenodo `10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258)
 
 ## 1. From Cosmological Hourglass to Subatomic Resolutions
 
@@ -36,7 +36,7 @@ $$
 E = Q_{\mathrm{stretch}} + PV = \sum_{i=1}^3\frac{m_i}{\lambda_i} + PV_0\lambda_1\lambda_2\lambda_3.
 $$
 
-## 2. Proposition 2.1 & The Six Core Theorems of Paper II
+## 2. Proposition 2.1 & The Seven Core Theorems of Paper II
 
 0. **Proposition 2.1 — Wave–Particle Duality at the Absolute-Zero Floor, Exponential Cloud Widening, and Helium-4 Room-Weaving Superfluidity (`helium_absolute_zero_wave_particle_bridge`):**
    Every matter atom has both a localized 3D `(1,1,1)` internal standing-wave core
@@ -91,23 +91,45 @@ $$
    periodic-table shell capacities $N_{\mathrm{shell}}(n) = 2\sum_{l=0}^{n-1}(2l+1) = 2n^2 = 2, 8, 18, 32, 50, 72$
    where the factor of $2$ is the right/left helical buckling handedness
    $\pm\omega^\star$ of **Axiom A1**.
-4. **Theorem 4 — Balloon-in-Balloon Pressure Venting as Beta Decay (`weak_balloon_in_balloon_venting`):**
+4. **Theorem 4 — Magnetism as Exterior Phase-Flow Vorticity, Lorentz Magnus Deflection, Helical $g_{e}$, and `(1,1,1)` Nucleon Magnetic Moments (`magnetic_vorticity_and_moments`):**
+   Exterior phase-flow connection $\mathbf{A}$ has vorticity $\mathbf{B} \equiv \nabla\times\mathbf{A}$,
+   giving $\nabla\cdot\mathbf{B} \equiv 0$ identically (no magnetic monopoles),
+   quantized room-woven flux $\Phi_{0} = h/(2e) = 2.067834\times 10^{-15}\ \mathrm{Wb}$,
+   and Euler–Lagrange / Lamb–Magnus transverse deflection $\mathbf{F} = q(\mathbf{E} + \mathbf{v}\times\mathbf{B})$
+   with $\mathbf{v}\cdot(q\mathbf{v}\times\mathbf{B}) \equiv 0$. Intrinsic **Axiom A1–A2**
+   helical buckling at $r_{\perp} = \lambda_{e}$ yields exact bare $g_{0} = 2$ and
+   impedance-dressed $g_{e}^{(2)} = 2.002319270$ ($-0.017\ \mathrm{ppm}$ vs. CODATA
+   $2.002319304$). From Paper I's `3:1` Virial core fraction ($E^\star(1,1,1)=4$),
+   the proton cavity charge radius is $r_{p,\mathrm{NSC}} = 4\lambda_{p} = 0.84124\ \mathrm{fm}$
+   ($+0.058$% vs. CODATA $0.84075\ \mathrm{fm}$), the neutron mean-square charge radius
+   from its outer $-e$ 6-face winding shell ($Q_{n}=0$) is $\langle r_{E}^2\rangle _{n} = -\frac{1}{6}r_{p}^2 = -0.1179\ \mathrm{fm}^2$
+   (PDG $-0.1161\ \mathrm{fm}^2$), and the 3-axis chiral spin factor
+   $g_{A,\mathrm{NSC}} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$ gives
+   parameter-free nucleon magnetic moments **without fractional quarks**:
+   $\mu_{n,\mathrm{NSC}} = -\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_{N} = -1.91421\ \mu_{N}$ ($+0.061$%),
+   $\mu_{p,\mathrm{NSC}} = (1 + \frac{15}{16}\cdot\frac{3}{2}g_{A,\mathrm{NSC}})\mu_{N} = (1 + \frac{45}{32}g_{A,\mathrm{NSC}})\mu_{N} = +2.79458\ \mu_{N}$ ($+0.062$%),
+   ratio $\mu_{n,\mathrm{NSC}}/\mu_{p,\mathrm{NSC}} = -\frac{8+16\sqrt{2}}{23+15\sqrt{2}} = -0.6849748$
+   ($-6.65\ \mathrm{ppm}$ vs. CODATA $-0.6849793$, $4{,}000\times$ closer than naive
+   SU(6) quarks $-2/3$), deuteron moment $\mu_{d,\mathrm{NSC}} = (\mu_{p}+\mu_{n})(1 - \frac{1}{2}e^{-3}) = +0.85845\ \mu_{N}$ ($+0.12$%),
+   and the cosmological 21-cm hydrogen hyperfine line $\nu_{21\mathrm{cm}} = 1421.35\ \mathrm{MHz}$
+   ($\lambda = 21.092\ \mathrm{cm}$, $+0.067$%).
+5. **Theorem 5 — Balloon-in-Balloon Pressure Venting as Beta Decay (`weak_balloon_in_balloon_venting`):**
    Inside a nucleus, neighboring `(1,1,1)` bubbles supply confining counter-pressure
    work $W_{\mathrm{confine}} > \Delta E_{np} = 1.2933\ \mathrm{MeV}$, keeping
    neutrons stable. In empty space, external counter-pressure vanishes and the
    un-confined neutron vents its excess 1D boundary winding across the two-valve
    cascade barrier ($\gamma_{\mathrm{core}}^5 e^{-4\chi_{\mathrm{freeze}}} = \gamma_{\mathrm{core}}^5 e^{-12} = 1.0102\times 10^{-5}$
-   vs. experimental $G_{F} m_{p}^2 c/\hbar^3 = 1.0268\times 10^{-5}$), with
-   3-axis axial coupling $g_{A} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$
+   vs. experimental $G_{F} m_{p}^2 c/\hbar^3 = 1.0268\times 10^{-5}$), with the
+   same 3-axis axial coupling $g_{A,\mathrm{NSC}} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$
    (experimental $1.2754$) and full Fermi phase-space lifetime
    $\tau_{\mathrm{vent}} = 878.0\text{--}882.0\ \mathrm{s}$ (observed $877.75\ \mathrm{s}$).
-5. **Theorem 5 — Nuclear Binding Curve, Chiral Pairing, and Heavy-Nucleus Fission (`nuclear_binding_and_fission_neck`):**
+6. **Theorem 6 — Nuclear Binding Curve, Chiral Pairing, and Heavy-Nucleus Fission (`nuclear_binding_and_fission_neck`):**
    Packing $A$ `(1,1,1)` triads with derived **Axiom A1** pairing
    $a_{P} = \frac{3}{4}a_{V} = 11.695\ \mathrm{MeV}$ reproduces the nuclear binding
    curve peaking at $^{56}\mathrm{Fe}\text{--}^{62}\mathrm{Ni}$ ($8.79\text{--}8.81\ \mathrm{MeV}$) and proves that
    heavy-nucleus fission above $(Z^2/A) _{\mathrm{crit}} = 2a_{S}/a_{C} = 47.37\text{--}48.42$
    follows the Paper I two-center equipotential neck equation and Cardano cubic
    $p^3 - 3p - 3 = 0$ ($p_+ = \varphi^{2/3}+\varphi^{-2/3} = 2.1038034$).
-6. **Theorem 6 — The Unified Eight-Tier Resolution Hierarchy (`unified_resolution_hierarchy_readout`):**
+7. **Theorem 7 — The Unified Eight-Tier Resolution Hierarchy (`unified_resolution_hierarchy_readout`):**
    Connects all eight resolution regimes across the $141.0$ e-folds
    ($\approx 47\times\chi_{\mathrm{freeze}}$) between $\ell_P$ and $2R_H$.

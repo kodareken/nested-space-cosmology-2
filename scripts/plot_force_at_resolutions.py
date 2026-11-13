@@ -15,6 +15,7 @@ import numpy as np
 from nsc_force_resolutions import (
     atomic_shell_and_em_impedance,
     helium_absolute_zero_wave_particle_bridge,
+    magnetic_vorticity_and_moments,
     nuclear_binding_and_fission_neck,
     single_force_facet_dilution_bridge,
     strong_nuclear_triad_confinement,
@@ -25,14 +26,15 @@ from nsc_force_resolutions import (
 ROOT = Path(__file__).resolve().parents[1]
 FIG_ATLAS_PATH = ROOT / "paper" / "figures" / "nsc-force-at-resolutions-atlas.png"
 FIG_HELIUM_PATH = ROOT / "paper" / "figures" / "nsc-helium-floor-and-fission-neck.png"
+FIG_MAGNETISM_PATH = ROOT / "paper" / "figures" / "nsc-magnetism-and-nucleon-moments.png"
 JSON_PATH = ROOT / "results" / "nsc-force-at-resolutions-v1.json"
 
 
-def build_helium_figure(p2_1: dict, t5: dict) -> None:
+def build_helium_figure(p2_1: dict, t6_fission: dict) -> None:
     fig, axes = plt.subplots(2, 2, figsize=(13.6, 9.2), dpi=220)
     fig.patch.set_facecolor("#ffffff")
     fig.suptitle(
-        "Proposition 2.1 & Theorems 4–5: Helium at the Absolute-Zero Floor, Exponential Cloud Widening & Room-Weaving Zero Friction",
+        "Proposition 2.1 & Theorems 5–6: Helium at the Absolute-Zero Floor, Exponential Cloud Widening & Room-Weaving Zero Friction",
         fontsize=11.5,
         fontweight="bold",
         y=0.98,
@@ -103,8 +105,8 @@ def build_helium_figure(p2_1: dict, t5: dict) -> None:
     # Panel D: Nuclear Beta-Stability Valley Z*(A) and Two-Center Fission Threshold
     ax = axes[1, 1]
     a_vals = np.linspace(2, 260, 260)
-    a_c = t5["a_coul_mev"]
-    a_a = t5["a_asym_mev"]
+    a_c = t6_fission["a_coul_mev"]
+    a_a = t6_fission["a_asym_mev"]
     dm_np = 1.29333
     z_star_curve = (a_vals * (1.0 + (dm_np + a_c * (a_vals ** (-1.0 / 3.0))) / (4.0 * a_a))) / (
         2.0 + (a_c / (2.0 * a_a)) * (a_vals ** (2.0 / 3.0))
@@ -122,7 +124,7 @@ def build_helium_figure(p2_1: dict, t5: dict) -> None:
         "U-238": (4, -5.5),
         "Cf-252": (-28, 4.5),
     }
-    for row in t5["sample_nuclei"]:
+    for row in t6_fission["sample_nuclei"]:
         ax.scatter([row["A"]], [row["Z"]], color="#b03a2e", s=38, zorder=5)
         dx, dy = valley_offsets.get(row["nucleus"], (3, -2.5))
         ax.text(row["A"] + dx, row["Z"] + dy, row["nucleus"], fontsize=7.4, fontweight="bold")
@@ -139,6 +141,240 @@ def build_helium_figure(p2_1: dict, t5: dict) -> None:
     plt.close(fig)
 
 
+def build_magnetism_figure(t3: dict, t4: dict) -> None:
+    fig, axes = plt.subplots(2, 2, figsize=(13.6, 9.2), dpi=220)
+    fig.patch.set_facecolor("#ffffff")
+    fig.suptitle(
+        "Theorem 4: Magnetism as Phase-Flow Vorticity, Lorentz Magnus Deflection, Helical $g_e$, and $(1,1,1)$ Nucleon Moments",
+        fontsize=11.5,
+        fontweight="bold",
+        y=0.98,
+    )
+
+    # Panel A: Transverse Lorentz / Magnus Stretch-Gradient Deflection (F = q v x B = -grad Q_stretch)
+    ax = axes[0, 0]
+    grid_n = 160
+    x_lin = np.linspace(-2.2, 2.2, grid_n)
+    y_lin = np.linspace(-1.7, 1.7, grid_n)
+    xx, yy = np.meshgrid(x_lin, y_lin)
+    r2 = xx ** 2 + yy ** 2
+    r0 = 0.36
+    r2_reg = np.maximum(r2, r0 ** 2)
+    # In rest frame of loop moving at +v_x through vorticity B_z: background counter-flow (-u0, 0) + circulation
+    u0 = 1.0
+    gamma_circ = 2.6 * math.pi * r0 * u0
+    ux = -u0 * (1.0 - (r0 ** 2) * (xx ** 2 - yy ** 2) / (r2_reg ** 2)) - (gamma_circ / (2.0 * math.pi)) * (yy / r2_reg)
+    uy = -u0 * (2.0 * (r0 ** 2) * xx * yy / (r2_reg ** 2)) + (gamma_circ / (2.0 * math.pi)) * (xx / r2_reg)
+    stretch_density = 0.5 * (ux ** 2 + uy ** 2)
+    stretch_masked = np.where(r2 < (r0 ** 2), np.nan, stretch_density)
+
+    cf = ax.contourf(xx, yy, stretch_masked, levels=24, cmap="RdYlBu_r", alpha=0.88)
+    fig.colorbar(cf, ax=ax, fraction=0.046, pad=0.03, label=r"Phase-Stretch Energy Density $\frac{1}{2}|\mathbf{u}_{\mathrm{tot}}|^2$")
+    ax.streamplot(x_lin, y_lin, ux, uy, color="#2c3e50", density=1.05, linewidth=0.85, arrowsize=0.85)
+    core_circle = plt.Circle((0.0, 0.0), r0, facecolor="#fdfefe", edgecolor="#1b2631", lw=2.0, zorder=6)
+    ax.add_patch(core_circle)
+    ax.text(0.0, 0.0, r"$+q$" + "\n" + r"$\circlearrowleft$", ha="center", va="center", fontsize=8.5, fontweight="bold", zorder=7)
+
+    # Velocity arrow (+x) and transverse Magnus/Lorentz deflection arrow (-y, toward low-stretch side)
+    ax.annotate(
+        "",
+        xy=(1.18, 0.0),
+        xytext=(0.38, 0.0),
+        arrowprops=dict(arrowstyle="-|>", lw=2.5, color="#1b2631"),
+        zorder=8,
+    )
+    ax.text(1.24, 0.0, r"$\mathbf{v}$", va="center", ha="left", fontsize=9.5, fontweight="bold", color="#1b2631",
+            bbox=dict(boxstyle="round,pad=0.18", facecolor="#ffffff", edgecolor="none", alpha=0.82), zorder=8)
+    ax.annotate(
+        "",
+        xy=(0.0, -1.18),
+        xytext=(0.0, -0.38),
+        arrowprops=dict(arrowstyle="-|>", lw=2.6, color="#922b21"),
+        zorder=8,
+    )
+    ax.text(
+        0.10,
+        -1.26,
+        r"$\mathbf{F}_{\mathrm{mag}} = q\mathbf{v}\times\mathbf{B} = -\nabla Q_{\mathrm{stretch}}$",
+        va="center",
+        ha="left",
+        fontsize=8.0,
+        fontweight="bold",
+        color="#922b21",
+        bbox=dict(boxstyle="round,pad=0.22", facecolor="#ffffff", edgecolor="#922b21", alpha=0.90),
+        zorder=8,
+    )
+    ax.text(
+        -2.08,
+        1.42,
+        r"Co-flowing side: high $|\nabla\psi|^2$",
+        fontsize=7.7,
+        fontweight="bold",
+        color="#7b241c",
+        bbox=dict(boxstyle="round,pad=0.20", facecolor="#ffffff", edgecolor="none", alpha=0.84),
+        zorder=8,
+    )
+    ax.text(
+        -2.08,
+        -1.50,
+        r"Counter-flowing side: low $|\nabla\psi|^2$ ($\mathbf{v}\cdot\mathbf{F}_{\mathrm{mag}}\equiv 0$)",
+        fontsize=7.5,
+        fontweight="bold",
+        color="#1b4f72",
+        bbox=dict(boxstyle="round,pad=0.20", facecolor="#ffffff", edgecolor="none", alpha=0.84),
+        zorder=8,
+    )
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.7, 1.7)
+    ax.set_xlabel(r"Propagation Axis $x / r_0$", fontsize=9.2)
+    ax.set_ylabel(r"Transverse Deflection Axis $y / r_0$", fontsize=9.2)
+    ax.set_title(r"A. Lorentz $q\mathbf{v}\times\mathbf{B}$ as Transverse Magnus Stretch Gradient", fontsize=9.8, fontweight="bold")
+
+    # Panel B: Gyromagnetic Factor Hierarchy Across Loops & Baryons
+    ax = axes[0, 1]
+    categories = [
+        "Orbital $S^2$\n($g_L$)",
+        "Bare Helix\n($g_0$)",
+        "Electron\n($g_e$)",
+        "Neutron\n($|g_n|=2|\\mu_n|$)",
+        "Proton\n($g_p=2\\mu_p$)",
+    ]
+    nsc_g = [
+        t4["g_orbital_exact"],
+        t4["g_helix_bare_exact"],
+        t4["g_e_2loop_nsc"],
+        2.0 * abs(t4["mu_neutron_nsc_mun"]),
+        2.0 * t4["mu_proton_nsc_mun"],
+    ]
+    exp_g = [
+        1.0,
+        2.0,
+        t4["g_electron_exp"],
+        2.0 * abs(t4["mu_neutron_exp_mun"]),
+        2.0 * t4["mu_proton_exp_mun"],
+    ]
+    x_pos = np.arange(len(categories))
+    bar_w = 0.34
+    bars_nsc = ax.bar(x_pos - bar_w / 2.0, nsc_g, width=bar_w, color="#1f618d", alpha=0.88, label="NSC Parameter-Free")
+    ax.bar(x_pos + bar_w / 2.0, exp_g, width=bar_w, color="#d35400", alpha=0.82, label="CODATA 2022 / Exact")
+    diff_tags = ["Exact", "Exact", "-0.017 ppm", "+0.061%", "+0.062%"]
+    for idx, (bar, val_nsc, tag) in enumerate(zip(bars_nsc, nsc_g, diff_tags)):
+        val_txt = f"{val_nsc:.6f}" if idx == 2 else f"{val_nsc:.4f}"
+        ax.text(
+            x_pos[idx],
+            max(nsc_g[idx], exp_g[idx]) + 0.14,
+            f"{val_txt}\n({tag})",
+            ha="center",
+            va="bottom",
+            fontsize=7.3,
+            fontweight="bold",
+        )
+    ax.set_xticks(x_pos)
+    ax.set_xticklabels(categories, fontsize=8.0)
+    ax.set_ylim(0.0, 6.75)
+    ax.set_ylabel(r"Gyromagnetic Factor $|g|$", fontsize=9.2)
+    ax.set_title(r"B. Gyromagnetic Hierarchy: $g_L=1 \to g_0=2 \to g_e \to (g_n, g_p)$", fontsize=9.8, fontweight="bold")
+    ax.grid(True, axis="y", alpha=0.28)
+    ax.legend(fontsize=7.8, loc="upper left")
+
+    # Panel C: Balloon-in-Balloon (1,1,1) Radial Charge Profiles for Proton & Neutron
+    ax = axes[1, 0]
+    r_fm = np.linspace(0.001, 1.45, 350)
+    lam_p = t4["lambda_proton_fm"]
+    r_p = t4["r_proton_nsc_fm"]
+    # Exponential / Yukawa cavity charge profile with exact RMS radius r_p = sqrt(12) * b_p => b_p = r_p / sqrt(12)
+    b_p = r_p / math.sqrt(12.0)
+    rho4pi_proton = ((r_fm ** 2) / (2.0 * (b_p ** 3))) * np.exp(-r_fm / b_p)
+    # Neutron two-shell profile: inner +e core (b_in) + outer -e 6-face shell (b_out) with Q_n = 0 and <r^2>_n = -r_p^2 / 6
+    b_in = 0.82 * b_p
+    b_out = math.sqrt((b_in ** 2) + ((r_p ** 2) / 72.0))
+    rho4pi_neutron = ((r_fm ** 2) / (2.0 * (b_in ** 3))) * np.exp(-r_fm / b_in) - (
+        (r_fm ** 2) / (2.0 * (b_out ** 3))
+    ) * np.exp(-r_fm / b_out)
+
+    ax.plot(r_fm, rho4pi_proton, color="#c0392b", lw=2.5, label=f"Proton $4\\pi r^2\\rho_{{E,p}}/e$ ($r_p=4\\lambda_p={r_p:.3f}$ fm)")
+    ax.plot(
+        r_fm,
+        rho4pi_neutron,
+        color="#117864",
+        lw=2.5,
+        label=f"Neutron $4\\pi r^2\\rho_{{E,n}}/e$ ($Q_n=0,\\ \\langle r_E^2\\rangle_n={t4['r2_neutron_nsc_fm2']:.3f}\\,\\mathrm{{fm}}^2$)",
+    )
+    ax.axhline(0.0, color="#333333", lw=1.1)
+    ax.axvline(lam_p, color="#7f8c8d", ls="--", lw=1.4, label=f"Inner Dirac core $\\lambda_p = {lam_p:.3f}$ fm ($1/16$ area)")
+    ax.axvline(r_p, color="#8e44ad", ls="-.", lw=1.5, label=f"$3:1$ Virial boundary $4\\lambda_p = {r_p:.3f}$ fm ($15/16$ shell)")
+    shell_mask = (r_fm >= lam_p) & (r_fm <= r_p)
+    ax.fill_between(r_fm, 0.0, rho4pi_proton, where=shell_mask, color="#f5b7b1", alpha=0.38)
+    ax.fill_between(r_fm, 0.0, rho4pi_neutron, where=(rho4pi_neutron < 0), color="#a3e4d7", alpha=0.45)
+    ax.set_xlim(0.0, 1.45)
+    ax.set_ylim(-0.34, 1.26)
+    ax.set_xlabel(r"Radial Distance from Triad Center $r$ [fm]", fontsize=9.2)
+    ax.set_ylabel(r"Radial Charge Density $4\pi r^2 \rho_E(r) / e$ [$\mathrm{fm}^{-1}$]", fontsize=9.2)
+    ax.set_title(r"C. Proton $15/16$ Chiral Shell vs. Neutron Inner $+e$ / Outer $-e$ Winding", fontsize=9.8, fontweight="bold")
+    ax.grid(True, alpha=0.28)
+    ax.legend(fontsize=7.2, loc="upper right")
+
+    # Panel D: Neutron-to-Proton Magnetic Moment Ratio |mu_n / mu_p| & Composite Spin Tests
+    ax = axes[1, 1]
+    model_labels = [
+        "Point Dirac\n($Q_n = 0$)",
+        "Naive SU(6)\nQuarks ($2/3$)",
+        "NSC $(1,1,1)$\nChiral Shell",
+        "CODATA 2022\nExperiment",
+    ]
+    ratio_mags = [
+        0.0,
+        abs(t4["ratio_su6_quark"]),
+        abs(t4["ratio_mu_n_over_mu_p_nsc"]),
+        abs(t4["ratio_mu_n_over_mu_p_exp"]),
+    ]
+    bar_colors = ["#95a5a6", "#e67e22", "#1e8449", "#2874a6"]
+    bars_r = ax.bar(np.arange(4), ratio_mags, width=0.44, color=bar_colors, alpha=0.88)
+    ax.axhline(abs(t4["ratio_mu_n_over_mu_p_exp"]), color="#2874a6", ls="--", lw=1.3)
+    error_notes = [
+        "0.00000\n(-100%)",
+        f"{abs(t4['ratio_su6_quark']):.5f}\n(-26,735 ppm)",
+        f"{abs(t4['ratio_mu_n_over_mu_p_nsc']):.6f}\n(-6.65 ppm)",
+        f"{abs(t4['ratio_mu_n_over_mu_p_exp']):.6f}\n(Reference)",
+    ]
+    for idx, (bar, note) in enumerate(zip(bars_r, error_notes)):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2.0,
+            ratio_mags[idx] + 0.018,
+            note,
+            ha="center",
+            va="bottom",
+            fontsize=7.4,
+            fontweight="bold",
+        )
+    summary_box = (
+        f"$\\mu_{{p,\\mathrm{{NSC}}}} = +{t4['mu_proton_nsc_mun']:.4f}\\,\\mu_N$ (+0.062%)\n"
+        f"$\\mu_{{n,\\mathrm{{NSC}}}} = {t4['mu_neutron_nsc_mun']:.4f}\\,\\mu_N$ (+0.061%)\n"
+        f"$\\mu_{{d,\\mathrm{{NSC}}}} = +{t4['mu_deuteron_nsc_mun']:.4f}\\,\\mu_N$ (+0.118%)\n"
+        f"$\\nu_{{21\\mathrm{{cm}}}} = {t4['nu_h_21cm_nsc_mhz']:.2f}\\,\\mathrm{{MHz}}$ ({t4['lambda_h_21cm_nsc_cm']:.2f} cm)"
+    )
+    ax.text(
+        -0.62,
+        0.56,
+        summary_box,
+        fontsize=6.9,
+        va="top",
+        ha="left",
+        bbox=dict(boxstyle="round,pad=0.30", facecolor="#f8f9f9", edgecolor="#1e8449", lw=1.2),
+    )
+    ax.set_xticks(np.arange(4))
+    ax.set_xticklabels(model_labels, fontsize=8.0)
+    ax.set_xlim(-0.70, 3.50)
+    ax.set_ylim(0.0, 0.84)
+    ax.set_ylabel(r"Magnitude $|\mu_n / \mu_p|$", fontsize=9.2)
+    ax.set_title(r"D. $|\mu_n/\mu_p|$ Ratio: $-6.65\,\mathrm{ppm}$ Match ($4{,}000\times$ Closer Than Naive $2/3$)", fontsize=9.8, fontweight="bold")
+    ax.grid(True, axis="y", alpha=0.28)
+
+    plt.tight_layout(rect=[0, 0, 1, 0.955])
+    fig.savefig(FIG_MAGNETISM_PATH, dpi=220)
+    plt.close(fig)
+
+
 def main() -> None:
     FIG_ATLAS_PATH.parent.mkdir(parents=True, exist_ok=True)
     JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -147,11 +383,13 @@ def main() -> None:
     t1 = single_force_facet_dilution_bridge()
     t2 = strong_nuclear_triad_confinement()
     t3 = atomic_shell_and_em_impedance()
-    t4 = weak_balloon_in_balloon_venting()
-    t5 = nuclear_binding_and_fission_neck()
-    t6 = unified_resolution_hierarchy_readout()
+    t4 = magnetic_vorticity_and_moments()
+    t5 = weak_balloon_in_balloon_venting()
+    t6 = nuclear_binding_and_fission_neck()
+    t7 = unified_resolution_hierarchy_readout()
 
-    build_helium_figure(p2_1, t5)
+    build_helium_figure(p2_1, t6)
+    build_magnetism_figure(t3, t4)
 
     fig, axes = plt.subplots(2, 3, figsize=(16.5, 10.2), dpi=220)
     fig.patch.set_facecolor("#ffffff")
@@ -174,11 +412,11 @@ def main() -> None:
         color="#d35400",
         s=70,
         zorder=5,
-        label=r"Atomic 1D loop ($\alpha_{\mathrm{EM}}^{-1}=137.036$)",
+        label=r"Atomic loop & magnetism ($\alpha_{\mathrm{EM}}^{-1}=137.036$)",
     )
     ax.scatter(
-        [math.log10(1.0 / t4["barrier_dressed_conductance"])],
-        [math.log10(t4["barrier_dressed_conductance"])],
+        [math.log10(1.0 / t5["barrier_dressed_conductance"])],
+        [math.log10(t5["barrier_dressed_conductance"])],
         color="#8e44ad",
         s=70,
         zorder=5,
@@ -217,7 +455,7 @@ def main() -> None:
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=7.5, loc="upper right")
 
-    # Panel C: Theorem 3 — Atomic Bohr Shells r_n = n^2 a_0 and Capacities 2n^2
+    # Panel C: Theorems 3–4 — Atomic Bohr Shells r_n = n^2 a_0, Capacities 2n^2 & EM Impedance
     ax = axes[0, 2]
     n_vals = [s["n"] for s in t3["shells"]]
     caps = [s["shell_capacity_2n2"] for s in t3["shells"]]
@@ -237,14 +475,14 @@ def main() -> None:
     ax.set_xticks(n_vals)
     ax.set_xlabel(r"Principal Loop Winding Integer $n\in\mathbb{Z}_{\geq 1}$", fontsize=9.5)
     ax.set_ylabel(r"Allowed States $2\sum_{l=0}^{n-1}(2l+1) = 2n^2$", fontsize=9.5)
-    ax.set_title(r"C. Theorem 3: Atomic Shells & $\alpha_{\mathrm{geom}}^{-1}=4\pi^3+\pi^2+\pi=137.036$", fontsize=10, fontweight="bold")
+    ax.set_title(r"C. Theorems 3–4: Shells, $\alpha_{\mathrm{geom}}^{-1}=137.036$ & Magnetism", fontsize=10, fontweight="bold")
     ax.grid(True, axis="y", alpha=0.3)
     ax.legend(fontsize=8, loc="upper left")
 
-    # Panel D: Theorem 4 — Balloon-in-Balloon Pressure Stabilization vs. Free Venting
+    # Panel D: Theorem 5 — Balloon-in-Balloon Pressure Stabilization vs. Free Venting
     ax = axes[1, 0]
     coord_numbers = np.arange(0, 7)
-    delta_g_vent = -t4["q_beta_free_mev"] + coord_numbers * t4["deuteron_binding_mev"]
+    delta_g_vent = -t5["q_beta_free_mev"] + coord_numbers * t5["deuteron_binding_mev"]
     colors = ["#c0392b" if val < 0 else "#1e8449" for val in delta_g_vent]
     ax.bar(coord_numbers, delta_g_vent, color=colors, width=0.55, alpha=0.85)
     ax.axhline(0.0, color="#222222", lw=1.3)
@@ -253,19 +491,19 @@ def main() -> None:
     ax.set_ylim(-2.6, 14.2)
     ax.set_xlabel(r"Neighboring $(1,1,1)$ Coordination Count $N_{\mathrm{coord}}$", fontsize=9.5)
     ax.set_ylabel(r"Venting Cost $\Delta G_{\mathrm{vent}}(N_{\mathrm{coord}})$ [MeV]", fontsize=9.5)
-    ax.set_title("D. Theorem 4: Weak Decay as Balloon-in-Balloon Pressure Venting", fontsize=10, fontweight="bold")
+    ax.set_title("D. Theorem 5: Weak Decay as Balloon-in-Balloon Pressure Venting", fontsize=10, fontweight="bold")
     ax.grid(True, axis="y", alpha=0.3)
 
-    # Panel E: Theorem 5 — Multi-Nucleon Packing Curve B/A and Fission Threshold
+    # Panel E: Theorem 6 — Multi-Nucleon Packing Curve B/A and Fission Threshold
     ax = axes[1, 1]
     a_grid = np.linspace(4, 260, 250)
     z_grid = a_grid / (2.0 + 0.0155 * (a_grid ** (2.0 / 3.0)))
     b_per_a_curve = (
-        t5["a_vol_mev"]
-        - t5["a_surf_mev"] / (a_grid ** (1.0 / 3.0))
-        - t5["a_coul_mev"] * z_grid * (z_grid - 1.0) / (a_grid ** (4.0 / 3.0))
-        - t5["a_asym_mev"] * ((a_grid - 2.0 * z_grid) ** 2) / (a_grid ** 2)
-        + t5["a_pair_mev"] / (a_grid ** 1.5)
+        t6["a_vol_mev"]
+        - t6["a_surf_mev"] / (a_grid ** (1.0 / 3.0))
+        - t6["a_coul_mev"] * z_grid * (z_grid - 1.0) / (a_grid ** (4.0 / 3.0))
+        - t6["a_asym_mev"] * ((a_grid - 2.0 * z_grid) ** 2) / (a_grid ** 2)
+        + t6["a_pair_mev"] / (a_grid ** 1.5)
     )
     ax.plot(a_grid, b_per_a_curve, color="#1f618d", lw=2.3, label=r"NSC $(1,1,1)$ packing curve $B(A,Z)/A$")
     label_offsets = {
@@ -279,7 +517,7 @@ def main() -> None:
         "U-238": (5, 0.08),
         "Cf-252": (-18, -0.26),
     }
-    for row in t5["sample_nuclei"]:
+    for row in t6["sample_nuclei"]:
         ax.scatter([row["A"]], [row["B_per_A_mev"]], color="#b03a2e", s=38, zorder=5)
         dx, dy = label_offsets.get(row["nucleus"], (4, -0.12))
         ax.text(row["A"] + dx, row["B_per_A_mev"] + dy, row["nucleus"], fontsize=7.5, fontweight="bold")
@@ -287,20 +525,20 @@ def main() -> None:
     ax.set_ylim(5.5, 9.3)
     ax.set_xlabel(r"Baryon Triad Count $A$", fontsize=9.5)
     ax.set_ylabel(r"Binding Energy per Nucleon $B/A$ [MeV]", fontsize=9.5)
-    ax.set_title(r"E. Theorem 5: Nuclear Packing & Fission Neck ($p_+=\varphi^{2/3}+\varphi^{-2/3}$)", fontsize=10, fontweight="bold")
+    ax.set_title(r"E. Theorem 6: Nuclear Packing & Fission Neck ($p_+=\varphi^{2/3}+\varphi^{-2/3}$)", fontsize=10, fontweight="bold")
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=8, loc="lower right")
 
-    # Panel F: Theorem 6 — Unified 8-Tier Resolution Spectrum [ell_P, 2 R_H]
+    # Panel F: Theorem 7 — Unified 8-Tier Resolution Spectrum [ell_P, 2 R_H]
     ax = axes[1, 2]
-    tiers = t6["resolution_tiers"]
+    tiers = t7["resolution_tiers"]
     log_scales = [math.log10(row["scale_m"]) for row in tiers]
     tier_nums = [row["tier"] for row in tiers]
     labels = [
         "1. Planck Pen Tip ($\\ell_P$)",
         "2. Two-Valve Neck ($e^{-3}\\lambda_n$)",
         "3. Baryon $(1,1,1)$ Core ($\\lambda_n$)",
-        "4. Atomic 1D Loop ($a_0$)",
+        "4. Atomic Loop & Mag. ($a_0$)",
         "5. $^4\\mathrm{He}$ Floor Weave ($\\lambda_{\\mathrm{dB}}$)",
         "6. Neutron Star ($R_{\\mathrm{NS}}$)",
         "7. Galactic Halo ($10\\ \\mathrm{kpc}$)",
@@ -314,16 +552,17 @@ def main() -> None:
     ax.set_ylim(0.4, 8.6)
     ax.set_xlabel(r"Log Wavelength / Resolution Scale $\log_{10}(\lambda / \mathrm{m})$", fontsize=9.5)
     ax.set_ylabel("Resolution Tier in Room Band $[\\ell_P, 2R_H]$", fontsize=9.5)
-    ax.set_title("F. Theorem 6: One Force Across 8 Tiers & 141 e-Folds ($47\\times\\chi_{\\mathrm{freeze}}$)", fontsize=10, fontweight="bold")
+    ax.set_title("F. Theorem 7: One Force Across 8 Tiers & 141 e-Folds ($47\\times\\chi_{\\mathrm{freeze}}$)", fontsize=10, fontweight="bold")
     ax.grid(True, alpha=0.3)
 
     plt.tight_layout(rect=[0, 0, 1, 0.955])
     fig.savefig(FIG_ATLAS_PATH, dpi=220)
     plt.close(fig)
 
-    JSON_PATH.write_text(json.dumps(t6, indent=2), encoding="utf-8", newline="\n")
+    JSON_PATH.write_text(json.dumps(t7, indent=2), encoding="utf-8", newline="\n")
     print(f"Wrote {FIG_ATLAS_PATH}")
     print(f"Wrote {FIG_HELIUM_PATH}")
+    print(f"Wrote {FIG_MAGNETISM_PATH}")
     print(f"Wrote {JSON_PATH}")
 
 

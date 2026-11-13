@@ -1,9 +1,9 @@
 # Nested-Space Cosmology: The Geometry of a Universe II
 
-## Force at Resolutions — Wave–Particle Duality, Helium at the Absolute-Zero Floor, and the Single Thermodynamic Pressure Gradient
+## Force at Resolutions — Wave–Particle Duality, Helium at the Absolute-Zero Floor, Magnetism & Nucleon Moments, and the Single Thermodynamic Pressure Gradient
 
 **Douglas Ek**
-Foundation Edition II · Version 0.2.0 · 5 November 2026
+Foundation Edition II · Version 0.3.0 · 14 November 2026
 
 ## Abstract
 
@@ -41,10 +41,11 @@ $$
 E=Q_{\mathrm{stretch}}+PV=\sum_{i=1}^3\frac{m_i}{\lambda_i}+PV_0\lambda_1\lambda_2\lambda_3.
 $$
 
-One foundational bridge proposition and six theorems establish how wave–particle
+One foundational bridge proposition and seven theorems establish how wave–particle
 duality, superfluidity, the four textbook forces, atomic shell structure,
-nuclear beta stability, heavy-nucleus fission, dark matter, and dark energy
-emerge as resolution regimes of this single pressure law across $[\ell_{P},2R_{H}]$:
+magnetism and nucleon magnetic moments, nuclear beta stability, heavy-nucleus
+fission, dark matter, and dark energy emerge as resolution regimes of this
+single pressure law across $[\ell_{P},2R_{H}]$:
 
 1. **Proposition 2.1 (Wave–Particle Duality, Exponential Cloud Widening, and Helium-4 Room-Weaving Superfluidity at the Absolute-Zero Floor):**
    Matter consists of a 3D `(1,1,1)` standing-wave core crystallized at
@@ -100,18 +101,43 @@ emerge as resolution regimes of this single pressure law across $[\ell_{P},2R_{H
    periodic-table shell capacities $N_{\mathrm{shell}}(n)=2\sum_{l=0}^{n-1}(2l+1)=2n^2=2,8,18,32,50,72$
    from $S^2$ harmonics times the $2$ helical buckling handednesses
    $\pm\omega^\star$ (**Axiom A1**).
-5. **Theorem 4 ("Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting):**
+5. **Theorem 4 ("Magnetism" as Exterior Phase-Flow Vorticity, Lorentz Magnus Deflection, Helical $g_{e}$, and `(1,1,1)` Nucleon Magnetic Moments):**
+   Magnetism is not an independent force field alongside electrostatics, but the
+   rotational vorticity $\mathbf B\equiv\nabla\times\mathbf A$ of the same $75$%
+   exterior potential flow (**Axioms A0--A1**), enforcing $\nabla\cdot\mathbf B\equiv 0$
+   identically (no magnetic monopoles), quantized room-woven flux
+   $\Phi_{0}=h/(2e)=2.067834\times 10^{-15}\ \mathrm{Wb}$, and the transverse
+   Magnus/Bernoulli stretch-gradient deflection $\mathbf F=q(\mathbf E+\mathbf v\times\mathbf B)$
+   with $\mathbf v\cdot(q\mathbf v\times\mathbf B)\equiv 0$. Intrinsic **Axiom A1--A2**
+   helical buckling at $\lambda_{e}$ yields exact bare $g_{0}=2$ and impedance-dressed
+   $g_{e,\mathrm{NSC}}^{(2)}=2.002319270$ ($-0.017\ \mathrm{ppm}$ from CODATA
+   $2.002319304$). Inside the `(1,1,1)` baryon cavity, Paper I's `3:1` Virial
+   partition fixes the proton charge radius at $r_{p,\mathrm{NSC}}=4\lambda_{p}=0.84124\ \mathrm{fm}$
+   ($+0.058$% from CODATA $0.84075\ \mathrm{fm}$), the neutron's outer $-e$ 6-face
+   winding shell ($Q_{n}=0$) fixes $\langle r_{E}^2\rangle _{n}=-\frac{1}{6}r_{p}^2=-0.11795\ \mathrm{fm}^2$
+   (PDG $-0.1161\ \mathrm{fm}^2$), and the 3-axis chiral spin factor
+   $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.276142$ gives
+   parameter-free nucleon magnetic moments **without fractional quarks**:
+   $\mu_{n,\mathrm{NSC}}=-\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_{N}=-1.914214\ \mu_{N}$ ($+0.061$%),
+   $\mu_{p,\mathrm{NSC}}=\left(1+\frac{45}{32}g_{A,\mathrm{NSC}}\right)\mu_{N}=+2.794575\ \mu_{N}$ ($+0.062$%),
+   ratio $\mu_{n,\mathrm{NSC}}/\mu_{p,\mathrm{NSC}}=-\frac{8+16\sqrt{2}}{23+15\sqrt{2}}=-0.6849748$
+   ($-6.65\ \mathrm{ppm}$ from CODATA $-0.6849793$, $4{,}020\times$ closer than
+   naive $SU(6)$ constituent quarks $-2/3$), deuteron moment
+   $\mu_{d,\mathrm{NSC}}=+0.85845\ \mu_{N}$ ($+0.12$%), and the cosmological 21-cm
+   hydrogen hyperfine line $\nu_{21\mathrm{cm}}=1421.35\ \mathrm{MHz}$
+   ($\lambda=21.092\ \mathrm{cm}$, $+0.067$%).
+6. **Theorem 5 ("Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting):**
    Inside a nucleus, neighboring `(1,1,1)` bubbles supply confining
    counter-pressure work $W_{\mathrm{confine}}\ge 2.225\ \mathrm{MeV}>\Delta E_{np}=1.293\ \mathrm{MeV}$
    that locks the neutron against decay. In empty space ($\Delta P_{\mathrm{neighbors}}=0$),
    an isolated neutron lacks counter-pressure and vents its excess 1D boundary
    winding across the two-valve cascade barrier
    ($g_{\mathrm{vent,NSC}}=\gamma_{\mathrm{core}}^5 e^{-4\chi_{\mathrm{freeze}}}=\gamma_{\mathrm{core}}^5 e^{-12}=1.0102\times 10^{-5}$
-   vs. experimental $G_{F} m_{p}^2 c/\hbar^3=1.0268\times 10^{-5}$), with 3-axis
-   `(1,1,1)` axial-vector coupling $g_{A}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.27614$
+   vs. experimental $G_{F} m_{p}^2 c/\hbar^3=1.0268\times 10^{-5}$), with the same
+   3-axis `(1,1,1)` axial-vector coupling $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.27614$
    (experimental $1.2754$) and full Fermi phase-space lifetime
    $\tau_{\mathrm{vent}}=878.0\text{--}882.0\ \mathrm{s}$ (observed $877.75\ \mathrm{s}$).
-6. **Theorem 5 (Multi-Nucleon Packing Curve, Derived Chiral Pairing, and Heavy-Nucleus Fission Neck):**
+7. **Theorem 6 (Multi-Nucleon Packing Curve, Derived Chiral Pairing, and Heavy-Nucleus Fission Neck):**
    Packing $A$ `(1,1,1)` triads with derived volume, surface, Coulomb, asymmetry,
    and **Axiom A1** chiral pairing ($a_{P}=\frac{3}{4}a_{V}=11.695\ \mathrm{MeV}$)
    terms reproduces the nuclear binding curve peaking at
@@ -120,7 +146,7 @@ emerge as resolution regimes of this single pressure law across $[\ell_{P},2R_{H
    the exact same two-center equipotential neck equation and Cardano cubic
    $p^3-3p-3=0$ ($p_+=\varphi^{2/3}+\varphi^{-2/3}=2.1038034$) as cosmological
    bubble fission in Paper I.
-7. **Theorem 6 (The Unified Eight-Tier Resolution Hierarchy Across $[\ell_{P},2R_{H}]$):**
+8. **Theorem 7 (The Unified Eight-Tier Resolution Hierarchy Across $[\ell_{P},2R_{H}]$):**
    All eight interaction regimes across the $141.0$ e-folds ($\approx 47\times\chi_{\mathrm{freeze}}$)
    from $\ell_P=1.616\times 10^{-35}\ \mathrm{m}$ to $\lambda_{\max}=2R_{H}=2.76\times 10^{26}\ \mathrm{m}$
    are governed by a single equation of state without separate force fields.
@@ -647,7 +673,209 @@ $$
 
 ---
 
-## 6. Theorem 4: "The Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting and Neutron Beta Relaxation
+## 6. Theorem 4: "Magnetism" as Exterior Phase-Flow Vorticity, the Lorentz $q\mathbf v\times\mathbf B$ Magnus Pressure Gradient, Helical $g_e$, and `(1,1,1)` Nucleon Magnetic Moments
+
+In **Theorem 3**, the irrotational radial gradient $-\nabla\Phi_{E}$ of the
+$75$% exterior potential flow produced electrostatics and quantized Bohr shells.
+Yet every student of physics is also taught that moving charges generate a
+second vector field — the **magnetic field** $\mathbf B$ — which deflects moving
+particles perpendicularly via $\mathbf F_{\mathrm{mag}}=q\mathbf v\times\mathbf B$,
+forms strictly closed field lines with no magnetic monopoles ($\nabla\cdot\mathbf B=0$),
+gives the electron a gyromagnetic ratio near $g_{e}\approx 2.002319$, and endows
+even the **electrically neutral neutron** with a large negative magnetic moment
+$\mu_{n}=-1.91304\ \mu_{N}$ alongside the proton's $\mu_{p}=+2.79285\ \mu_{N}$.
+
+Under **Axioms A0--A2**, magnetism is not an additional force field: it is the
+**rotational vorticity** of the exact same exterior potential flow when a phase
+loop or `(1,1,1)` baryon triad carries azimuthal or helical circulation.
+
+### 6.1 Proposition 6.1: Exterior Vorticity $\mathbf B=\nabla\times\mathbf A$, Absence of Magnetic Monopoles, Flux Quantization, and the Transverse Magnus Stretch Gradient
+
+**Proposition 6.1 (Vorticity Identity, Monopole Absence, Flux Quantum $\Phi_{0}$, and Lorentz--Magnus Force Law):**
+Let an exterior phase-flow configuration carry scalar pressure potential
+$\Phi_{E}(\mathbf x,t)$ and rotational phase-velocity connection
+$\mathbf A(\mathbf x,t)$, with vorticity $\mathbf B(\mathbf x,t)\equiv\nabla\times\mathbf A(\mathbf x,t)$.
+Then:
+
+1. **Exact absence of magnetic monopoles ($\nabla\cdot\mathbf B\equiv 0$):**
+   Because $\mathbf B=\nabla\times\mathbf A$ is the curl of a smooth exterior
+   phase-velocity connection on $\mathbb R^3$, its divergence vanishes
+   identically everywhere:
+
+$$
+\nabla\cdot\mathbf B=\nabla\cdot(\nabla\times\mathbf A)\equiv 0.
+$$
+
+   Magnetic field lines are closed vortex filaments in the $75$% exterior flow;
+   isolated "magnetic monopoles" cannot exist without tearing single-valued phase
+   continuity.
+2. **Topological flux quantization ($\Phi_{0}=h/(2e)$):**
+   Around any closed loop $\mathcal C=\partial\Sigma$ in a coherent condensate
+   $\Psi=|\Psi|e^{i\phi}$ where gauge-covariant phase shear vanishes
+   ($\hbar\nabla\phi-q\mathbf A=\mathbf 0$), single-valuedness
+   $\oint_{\mathcal C}\nabla\phi\cdot d\mathbf{l}=2\pi n$ ($n\in\mathbb Z$) and
+   Stokes' theorem lock the enclosed magnetic vortex flux to
+
+$$
+\Phi_B=\int_\Sigma\mathbf B\cdot d\mathbf S=\oint_{\mathcal C}\mathbf A\cdot d\mathbf{l}=n\frac{h}{q}\qquad
+\Phi_0\equiv\frac{h}{2e}=2.06783385\times 10^{-15}\ \mathrm{Wb},
+$$
+
+   where $q_{\mathrm{pair}}=2e$ corresponds to a paired $(+\omega^\star,-\omega^\star)$
+   room-woven loop (**Axiom A1**).
+3. **Transverse Lorentz deflection $\mathbf F=q(\mathbf E+\mathbf v\times\mathbf B)$ as an Axiom A0 Magnus stretch gradient:**
+   Varying the **Axiom A0** phase-coupled action with Lagrangian
+   $L(\mathbf{x},\mathbf{v},t)=\frac{1}{2}m\mathbf{v}^2-q\Phi_{E}(\mathbf{x},t)+q\mathbf{v}\cdot\mathbf{A}(\mathbf{x},t)$
+   via $\frac{d}{dt}(\partial L/\partial\mathbf{v})=\nabla L$ — or
+   equivalently applying the hydrodynamic Lamb--Magnus identity
+   $\nabla(\frac{1}{2}|\mathbf{u}|^2)=(\mathbf{u}\cdot\nabla)\mathbf{u}+\mathbf{u}\times(\nabla\times\mathbf{u})$
+   to the superposed self-circulation and background counter-flow — yields
+
+$$
+\boxed{\mathbf F=q\left(\mathbf E+\mathbf v\times\mathbf B\right)\qquad
+\mathbf E\equiv-\nabla\Phi_E-\partial_t\mathbf A\qquad
+\mathbf B\equiv\nabla\times\mathbf A\qquad
+\mathbf v\cdot\left(q\mathbf v\times\mathbf B\right)\equiv 0.}
+$$
+
+   Physically, when a circulating phase loop translates at velocity $\mathbf v$
+   across background vorticity $\mathbf B$, the self-flow and background flow
+   add on the co-flowing side (raising $|\nabla\psi|^2$) and cancel on the
+   counter-flowing side (lowering $|\nabla\psi|^2$). Minimizing $Q_{\mathrm{stretch}}$
+   (**Axiom A0**) pushes the loop toward the low-stretch side strictly
+   perpendicular to $\mathbf v$, deflecting trajectories while performing
+   identically zero mechanical work ($\mathbf v\cdot\mathbf F_{\mathrm{mag}}\equiv 0$).
+
+### 6.2 Theorem 4: Helical Gyromagnetic Ratio $g_e$, `(1,1,1)` Charge Radii, Parameter-Free Nucleon Magnetic Moments ($\mu_{p},\mu_{n},\mu_{n}/\mu_{p}$), and the 21-cm Hydrogen Line
+
+**Theorem 4 (Electron Helical Moment $g_e$, `(1,1,1)` Proton/Neutron Charge Radii, Chiral-Shell Nucleon Magnetic Moments Without Fractional Quarks, and the 21-cm Hyperfine Line):**
+Let $\alpha_{\mathrm{geom}}=(4\pi^3+\pi^2+\pi)^{-1}$ be the 3D-to-1D phase-space
+impedance of **Theorem 3(1)**, $\mu_{B}=e\hbar/(2m_{e})$ be the Bohr magneton,
+$\mu_{N}=e\hbar/(2m_{p})$ be the nuclear magneton, and
+$\gamma_{\mathrm{core}}=8(\sqrt{2}-1)/3$ be the per-axis `(2,2,2)` hard-core
+barrier factor of **Theorem 2(2)**. Then:
+
+- **(1) Orbital $g_L=1$ vs. intrinsic Axiom A1--A2 helical $g_0=2$, and self-flow anomaly $a_e$ ($g_{e,\mathrm{NSC}}^{(2)}=2.002319270$):**
+  An orbital loop on $S^2$ of radius $r$ carries current $I=ev/(2\pi r)$, enclosed
+  area $\pi r^2$, magnetic moment $\mu_{L}=IA=evr/2=(e/2m_{e})L$, and exact
+  orbital gyromagnetic factor $g_{L}=1$. By contrast, an intrinsic **Axiom A1**
+  electron filament buckles helically at its Compton healing radius
+  $r_{\perp}=\lambda_{e}=\hbar/(m_{e} c)$, generating the full Compton circulation
+  moment $\mu_{0}=ec\lambda_{e}/2=e\hbar/(2m_{e})=\mu_{B}$, while **Axiom A2**
+  half-turn spinor projection ($e^{i\pi}=-1$) partitions canonical angular
+  momentum equally between the two orthogonal projection planes ($S_{z}=\frac{1}{2}\hbar$),
+  fixing the exact bare helical gyromagnetic ratio
+
+$$
+g_0\equiv\frac{\mu_0/\mu_B}{S_z/\hbar}=\frac{1}{1/2}=2.
+$$
+
+  Dressing this helical loop with its own exterior phase flow across the
+  3D-to-1D impedance $\alpha_{\mathrm{geom}}$ adds the 1-loop azimuthal turn
+  $a_{e,\mathrm{NSC}}^{(1)}=\alpha_{\mathrm{geom}}/(2\pi)=0.001161407$
+  ($g_{e,\mathrm{NSC}}^{(1)}=2.00232281$, $+1.75\ \mathrm{ppm}$) and the 2-loop
+  toroidal recoil ($C_{2}=\frac{197}{144}+\frac{\pi^2}{12}-\frac{1}{2}\pi^2\ln 2+\frac{3}{4}\zeta(3)=-0.32847897$):
+
+$$
+\boxed{g_{e,\mathrm{NSC}}^{(2)}=2\left[1+\frac{\alpha_{\mathrm{geom}}}{2\pi}+C_2\left(\frac{\alpha_{\mathrm{geom}}}{\pi}\right)^2\right]=2.002319270\qquad\left(\mathrm{CODATA\ }g_{e,\mathrm{exp}}=2.00231930436,\ -0.017\ \mathrm{ppm}\right).}
+$$
+
+- **(2) `(1,1,1)` proton charge radius $r_{p,\mathrm{NSC}}=4\lambda_{p}=0.84124\ \mathrm{fm}$ and neutron negative mean-square charge radius $\langle r_{E}^2\rangle _{n}=-0.11795\ \mathrm{fm}^2$:**
+  By **Theorem 3 of Paper I**, the compact internal pressure core holds $\frac{1}{4}$
+  of the total `(1,1,1)` bubble energy ($E^\star(1,1,1)=4$, $m_{\mathrm{core}}=\frac{1}{4}m_{p}$),
+  fixing the proton's 3-axis Virial cavity / RMS charge radius directly at
+
+$$
+\boxed{r_{p,\mathrm{NSC}}=E^\star(1,1,1)\lambda_p=4\frac{\hbar}{m_p c}=0.841236\ \mathrm{fm}\qquad\left(\mathrm{CODATA\ }0.84075\pm 0.00064\ \mathrm{fm},\ +0.058\ \mathrm{percent},\ 0.76\sigma\right).}
+$$
+
+  In the electrically neutral balloon-in-balloon neutron ($Q_{n}=0$), the inner
+  `(1,1,1)` core carries $+e$ while the outer 1D boundary winding distributes $-e$
+  across the $6$ faces of the cubic `(1,1,1)` cell, yielding a **negative**
+  mean-square charge radius without invoking fractional quarks:
+
+$$
+\langle r_E^2\rangle _{n,\mathrm{NSC}}=-\frac{1}{6}r_{p,\mathrm{NSC}}^2=-\frac{8}{3}\lambda_p^2=-0.11795\ \mathrm{fm}^2\qquad\left(\mathrm{PDG\ }-0.1161\pm 0.0022\ \mathrm{fm}^2,\ 1.59\ \mathrm{percent}\right).
+$$
+
+- **(3) Parameter-free neutron and proton magnetic moments ($\mu_{n},\mu_{p}$) and the $-6.65\ \mathrm{ppm}$ $\mu_{n}/\mu_{p}$ ratio without quarks:**
+  In standard particle textbooks, $\mu_{n}=-1.91304\ \mu_{N}$ and
+  $\mu_{p}=+2.79285\ \mu_{N}$ are attributed to three constituent quarks of
+  charges $(+\frac{2}{3}e,-\frac{1}{3}e)$, whose $SU(6)$ spin-flavor wavefunctions
+  predict $\mu_{n}/\mu_{p}=-2/3=-0.66667$ — missing the experimental ratio
+  $-0.684979$ by $26{,}735\ \mathrm{ppm}$ ($2.7$%) unless constituent quark
+  masses and anomalous moments are fitted by hand.
+  Under **Axioms A0--A1**, a 3-axis `(1,1,1)` baryon bubble of energy
+  $E^\star(1,1,1)=4$ carries the barrier-dressed chiral spin factor
+
+$$
+g_{A,\mathrm{NSC}}=1+\frac{\gamma_{\mathrm{core}}}{E^\star(1,1,1)}=1+\frac{2(\sqrt{2}-1)}{3}=1.2761424.
+$$
+
+  For the **neutron** ($Q_{n}=0$), the net point-Dirac core moment vanishes
+  ($\mu_{n,\mathrm{Dirac}}=0$), while its outer $-e$ boundary winding circulates
+  across all $3$ orthogonal triad axes with spinor projection $\frac{1}{2}$,
+  giving a chiral loop factor of $\frac{3}{2}g_{A,\mathrm{NSC}}$:
+
+$$
+\boxed{\mu_{n,\mathrm{NSC}}=-\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_N=-\left(\frac{1}{2}+\sqrt{2}\right)\mu_N=-1.914214\ \mu_N\qquad\left(\mathrm{CODATA\ }-1.9130427\ \mu_N,\ +0.061\ \mathrm{percent}\right).}
+$$
+
+  For the **proton** ($Q_{p}=+e$), the inner Compton core ($r\le\lambda_{p}$)
+  contributes the unit Dirac moment $+1\ \mu_{N}$, while the exterior Virial
+  cavity shell $[\lambda_{p},4\lambda_{p}]$ carries the exact geometric
+  current-loop area fraction $1-(\lambda_{p}/r_{p,\mathrm{NSC}})^2=1-\frac{1}{16}=\frac{15}{16}$:
+
+$$
+\boxed{\mu_{p,\mathrm{NSC}}=\left(1+\frac{15}{16}\cdot\frac{3}{2}g_{A,\mathrm{NSC}}\right)\mu_N=\left(1+\frac{45}{32}g_{A,\mathrm{NSC}}\right)\mu_N=+2.794575\ \mu_N\qquad\left(\mathrm{CODATA\ }+2.7928473\ \mu_N,\ +0.062\ \mathrm{percent}\right).}
+$$
+
+  Dividing $\mu_{n,\mathrm{NSC}}$ by $\mu_{p,\mathrm{NSC}}$ cancels $\mu_{N}$ and
+  yields a pure algebraic constant determined solely by $\sqrt{2}$:
+
+$$
+\boxed{\frac{\mu_{n,\mathrm{NSC}}}{\mu_{p,\mathrm{NSC}}}=-\frac{\frac{3}{2}g_{A,\mathrm{NSC}}}{1+\frac{45}{32}g_{A,\mathrm{NSC}}}=-\frac{8+16\sqrt{2}}{23+15\sqrt{2}}=-0.68497479\qquad\left(\mathrm{CODATA\ }-0.68497934,\ -6.65\ \mathrm{ppm}\right),}
+$$
+
+  improving on the naive $SU(6)$ constituent-quark ratio $-2/3$ by a factor of
+  **$4{,}020\times$** with zero free parameters.
+- **(4) Deuteron magnetic moment $\mu_d$ and the cosmological 21-cm Hydrogen hyperfine line:**
+  In the bound spin-1 deuteron ($^2\mathrm{H}$, $p+n$ contact pair), subtracting
+  the half-cascade quadrupole $D$-state fraction $\frac{1}{2}e^{-\chi_{\mathrm{freeze}}}=\frac{1}{2}e^{-3}$
+  from the isoscalar sum $\mu_{p,\mathrm{NSC}}+\mu_{n,\mathrm{NSC}}=+0.880362\ \mu_{N}$
+  gives $\mu_{d,\mathrm{NSC}}=(\mu_{p,\mathrm{NSC}}+\mu_{n,\mathrm{NSC}})(1-\frac{1}{2}e^{-3})=+0.858446\ \mu_{N}$
+  (CODATA $+0.857438\ \mu_{N}$, $+0.118$%). Coupling $\mu_{p,\mathrm{NSC}}$ to
+  the $n=1$ electron loop's $g_{e,\mathrm{NSC}}^{(2)}$ across the reduced-mass
+  $1s$ Bohr wave density $|\psi_{1s}(0)|^2=(\pi a_{0,\mathrm{red}}^3)^{-1}$
+  yields the cosmological **21-cm hydrogen hyperfine spin-flip transition** used
+  to map galactic neutral-hydrogen rotation curves (Tier 7 of Theorem 7):
+
+$$
+\Delta E_{\mathrm{HFS}}=\frac{4}{3}\alpha_{\mathrm{geom}}^4\frac{m_e}{m_p}\left(\frac{2\mu_{p,\mathrm{NSC}}}{\mu_N}\right)\left(\frac{g_{e,\mathrm{NSC}}^{(2)}}{2}\right)m_e c^2\left(1+\frac{m_e}{m_p}\right)^{-3}\qquad\Longrightarrow\qquad
+\nu_{21\mathrm{cm},\mathrm{NSC}}=1421.35\ \mathrm{MHz}\quad(\lambda_{21\mathrm{cm},\mathrm{NSC}}=21.092\ \mathrm{cm}),
+$$
+
+  within $+0.067$% of the measured $1420.4058\ \mathrm{MHz}$ ($21.106\ \mathrm{cm}$).
+
+![Theorem 4: Magnetism, Lorentz Magnus Deflection, and Nucleon Magnetic Moments](figures/nsc-magnetism-and-nucleon-moments.png)
+
+| Magnetic / Spin Observable | Derived NSC Formula (`A0--A2`, Thm 2--3) | NSC Value | CODATA 2022 / PDG | Relative Agreement |
+| --- | --- | --- | --- | --- |
+| Paired flux quantum $\Phi_0$ | $h/(2e)$ ($\pm\omega^\star$ loop closure) | $2.067834\times 10^{-15}\ \mathrm{Wb}$ | $2.067834\times 10^{-15}\ \mathrm{Wb}$ | Exact (Class I) |
+| Bare helical factor $g_0$ | $(\mu_{B}/\mu_{B})/((\hbar/2)/\hbar)$ | $2$ | $2$ | Exact (Class I) |
+| Electron $g$-factor $g_e^{(2)}$ | $2[1+\alpha_{\mathrm{geom}}/(2\pi)+C_{2}(\alpha_{\mathrm{geom}}/\pi)^2]$ | $2.002319270$ | $2.002319304$ | **$-0.017\ \mathrm{ppm}$** |
+| Proton charge radius $r_p$ | $E^\star(1,1,1)\lambda_{p} = 4\lambda_{p}$ (`3:1` Virial core) | $0.84124\ \mathrm{fm}$ | $0.84075(64)\ \mathrm{fm}$ | **$+0.058$% ($0.76\sigma$)** |
+| Neutron $\langle r_{E}^2\rangle _{n}$ | $-\frac{1}{6}r_{p,\mathrm{NSC}}^2 = -\frac{8}{3}\lambda_{p}^2$ ($6$-face $-e$ shell) | $-0.11795\ \mathrm{fm}^2$ | $-0.1161(22)\ \mathrm{fm}^2$ | **$1.59$% ($0.84\sigma$)** |
+| Chiral spin factor $g_{A,\mathrm{NSC}}$ | $1+\gamma_{\mathrm{core}}/4 = 1+2(\sqrt{2}-1)/3$ | $1.276142$ | $1.2754(13)$ | **$+0.058$% ($0.57\sigma$)** |
+| Neutron moment $\mu_n$ | $-\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_{N} = -(\frac{1}{2}+\sqrt{2})\mu_{N}$ | **$-1.914214\ \mu_N$** | **$-1.913043\ \mu_N$** | **$+0.061$%** |
+| Proton moment $\mu_p$ | $(1+\frac{15}{16}\cdot\frac{3}{2}g_{A,\mathrm{NSC}})\mu_{N} = (1+\frac{45}{32}g_{A,\mathrm{NSC}})\mu_{N}$ | **$+2.794575\ \mu_N$** | **$+2.792847\ \mu_N$** | **$+0.062$%** |
+| Ratio $\mu_{n}/\mu_{p}$ | $-(8+16\sqrt{2})/(23+15\sqrt{2})$ (vs. quark $-2/3$) | **$-0.6849748$** | **$-0.6849793$** | **$-6.65\ \mathrm{ppm}$** |
+| Deuteron moment $\mu_d$ | $(\mu_{p,\mathrm{NSC}}+\mu_{n,\mathrm{NSC}})(1-\frac{1}{2}e^{-3})$ | $+0.85845\ \mu_N$ | $+0.85744\ \mu_N$ | $+0.118$% |
+| H $1s$ 21-cm line $\nu_{21\mathrm{cm}}$ | $\frac{4}{3}\alpha_{\mathrm{geom}}^4(m_{e}/m_{p})g_{p}(g_{e}/2)m_{e} c^2/h$ | $1421.35\ \mathrm{MHz}$ ($21.09\ \mathrm{cm}$) | $1420.41\ \mathrm{MHz}$ ($21.11\ \mathrm{cm}$) | $+0.067$% |
+
+---
+
+## 7. Theorem 5: "The Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting and Neutron Beta Relaxation
 
 In the Standard Model, nuclear beta decay ($n\to p+e^-+\bar\nu_e$) is attributed
 to a separate "weak nuclear force" mediated by heavy $W^\pm$ bosons. Yet the
@@ -657,9 +885,11 @@ bound atomic nucleus** (such as $^{2}\mathrm{H}$, $^{4}\mathrm{He}$, $^{12}\math
 or $^{56}\mathrm{Fe}$).
 
 In Nested-Space Cosmology, this is a direct thermodynamic consequence of
-**balloon-in-balloon pressure equilibration**.
+**balloon-in-balloon pressure equilibration**, governed by the exact same
+3-axis chiral spin factor $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}$
+that fixed $\mu_n$ and $\mu_p$ in **Theorem 4(3)**.
 
-**Theorem 4 (Balloon-in-Balloon Confining Pressure Stabilization, Axial-Vector Coupling $g_A$, and Vacuum Venting Across the Two-Valve Cascade Barrier):**
+**Theorem 5 (Balloon-in-Balloon Confining Pressure Stabilization, Axial-Vector Coupling $g_A$, and Vacuum Venting Across the Two-Valve Cascade Barrier):**
 Let the proton be the relaxed `(1,1,1)` baryon triad ground state ($m_p=938.2721\ \mathrm{MeV}/c^2$)
 and the neutron be the excited `(1,1,1)` triad carrying an additional 1D boundary
 winding load $\Delta E_{np}=(m_{n}-m_{p})c^2=1.29333\ \mathrm{MeV}=2.5310\ m_{e} c^2$,
@@ -709,11 +939,11 @@ $$
 $$
 
   to within $1.62$%.
-- **(3) 3-axis `(1,1,1)` axial-vector coupling $g_{A}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.27614$ and full Fermi phase-space neutron lifetime $\tau_{\mathrm{vent}}=878.0\text{--}882.0\ \mathrm{s}$:**
+- **(3) 3-axis `(1,1,1)` axial-vector coupling $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.27614$ and full Fermi phase-space neutron lifetime $\tau_{\mathrm{vent}}=878.0\text{--}882.0\ \mathrm{s}$:**
   When the 1D boundary winding vents from the 3-axis `(1,1,1)` core of energy
   $E^\star(1,1,1)=4$, the vector channel has unit weight ($g_V=1$), while the
-  axial-vector spin/chiral channel receives the per-unit-core hard-core barrier
-  enhancement $\gamma_{\mathrm{core}}/E^\star(1,1,1)=\frac{1}{4}\gamma_{\mathrm{core}}$:
+  axial-vector spin/chiral channel carries the exact same barrier-dressed factor
+  $g_{A,\mathrm{NSC}}$ derived in **Theorem 4(3)**:
 
 $$
 \boxed{g_{A,\mathrm{NSC}}=1+\frac{\gamma_{\mathrm{core}}}{E^\star(1,1,1)}=1+\frac{2(\sqrt{2}-1)}{3}=1.276142\qquad(\mathrm{experimental\ }g_{A,\mathrm{exp}}=1.2754\pm 0.0013,\ +0.058\ \mathrm{percent}).}
@@ -735,7 +965,7 @@ $$
 
 ---
 
-## 7. Theorem 5: Multi-Nucleon `(1,1,1)` Packing, Derived Chiral Pairing, and Heavy-Nucleus Fission via the Paper I Two-Center Neck Equation
+## 8. Theorem 6: Multi-Nucleon `(1,1,1)` Packing, Derived Chiral Pairing, and Heavy-Nucleus Fission via the Paper I Two-Center Neck Equation
 
 Just as a single bubble in Paper I (Theorems 4 and 5) divides along the
 two-center equipotential neck family $\Phi(\mathbf x)=A_{1}/|\mathbf x-c\mathbf e_{z}|+A_{2}/|\mathbf x+c\mathbf e_{z}|$
@@ -743,7 +973,7 @@ with causal quadrupole instability root $p^3-3p-3=0\Rightarrow p_+=\varphi^{2/3}
 a heavy atomic nucleus of $A$ packed `(1,1,1)` triads undergoes nuclear fission
 by the **exact same geometric law**.
 
-**Theorem 5 (Derived Semi-Empirical Packing Coefficients, Chiral Pairing $a_P$, Beta-Stability Valley $Z^\star(A)$, and Critical Fissility Threshold):**
+**Theorem 6 (Derived Semi-Empirical Packing Coefficients, Chiral Pairing $a_P$, Beta-Stability Valley $Z^\star(A)$, and Critical Fissility Threshold):**
 When $A=Z+N$ crystallized `(1,1,1)` baryon bubbles pack into a composite spherical
 cluster of radius $R(A)=r_0 A^{1/3}$ ($r_{0}=4\sqrt{2}\lambda_{n}=1.1880\ \mathrm{fm}$):
 
@@ -799,11 +1029,11 @@ $$
 
 ---
 
-## 8. Theorem 6: The Unified Resolution Hierarchy Across $[\ell_{P},2R_{H}]$, Complete Observer Dictionary, and Epistemic Quarantine
+## 9. Theorem 7: The Unified Resolution Hierarchy Across $[\ell_{P},2R_{H}]$, Complete Observer Dictionary, and Epistemic Quarantine
 
-### 8.1 The Eight-Tier Resolution Atlas Across $141.0$ e-Folds ($[\ell_{P}, 2R_{H}]$)
+### 9.1 The Eight-Tier Resolution Atlas Across $141.0$ e-Folds ($[\ell_{P}, 2R_{H}]$)
 
-Combining **Proposition 2.1** and **Theorems 1--5** of Paper II with
+Combining **Proposition 2.1** and **Theorems 1--6** of Paper II with
 **Theorems 1--7** and **Propositions 9.2b--9.7c** of Paper I establishes that our
 room spans a total dynamic range of
 
@@ -820,14 +1050,14 @@ macroscopic, and cosmological regimes without separate force fields:
 | :---: | --- | --- | --- | --- |
 | **1** | $\ell_P=1.616\times 10^{-35}\ \mathrm{m}$ | $1$ | Quantum Gravity / Bounce | Minimum facet step $\mathcal R(0)=\ell_P>0$; 1D pen resets and draws out child room (`+ -> 0 -> -`) |
 | **2** | $e^{-3}\lambda_n=1.046\times 10^{-17}\ \mathrm{m}$ | $\gamma_{\mathrm{core}}^5 e^{-12}=1.010\times 10^{-5}$ | Weak Force ($\beta$ decay) | Balloon-in-balloon pressure relief when a `(1,1,1)` neutron loses neighbor counter-pressure ($\tau_n=878\text{--}882\ \mathrm{s}$) |
-| **3** | $\lambda_n=2.100\times 10^{-16}\ \mathrm{m}$ | $\alpha_S\equiv 1$ | Strong Nuclear Force | Undivided `(1,1,1)` stretch ($E^\star=4$), $-2m_0/d$ shared flow, $+3.3137$ hard core & $\sigma_{\mathrm{eff}}\lambda_{3}$ string |
-| **4** | $a_0=5.292\times 10^{-11}\ \mathrm{m}$ | $(4\pi^3+\pi^2+\pi)^{-1}=1/137.0363$ | Electromagnetism & Shells | 3D-to-1D spherical-toroidal impedance; Bohr shells $r_{n}^\star=n^2 a_{0}$, capacities $2n^2=2,8,18,32$ |
+| **3** | $\lambda_n=2.100\times 10^{-16}\ \mathrm{m}$ | $\alpha_S\equiv 1$ | Strong Force & Nucleon Moments | Undivided `(1,1,1)` stretch ($E^\star=4$), $r_{p}=4\lambda_{p}=0.841\ \mathrm{fm}$, $\mu_{n}/\mu_{p}=-0.684975$ ($-6.65\ \mathrm{ppm}$), $+3.3137$ hard core & $\sigma_{\mathrm{eff}}\lambda_{3}$ string |
+| **4** | $a_0=5.292\times 10^{-11}\ \mathrm{m}$ | $(4\pi^3+\pi^2+\pi)^{-1}=1/137.0363$ | Electromagnetism, Shells & $\mathbf B=\nabla\times\mathbf A$ | 3D-to-1D impedance; shells $r_{n}^\star=n^2 a_{0}$, capacities $2n^2$; Magnus $q\mathbf v\times\mathbf B$, $g_{e}^{(2)}=2.00231927$, 21-cm line $1421.35\ \mathrm{MHz}$ |
 | **5** | $\lambda_{\mathrm{dB,bare}}(T_{\lambda})=5.92\times 10^{-10}\ \mathrm{m}$ | $\Delta\chi_{\mathrm{unfreeze}}=2.94\approx\chi_{\mathrm{freeze}}=3$ | Superfluidity & Wave–Particle Floor | Logarithmic cooling widens $^4\mathrm{He}$ cloud exponentially ($e^3 R_{\mathrm{He}}=6.30\ \mathrm{\AA}$), weaving into room span $2R$ ($\eta=0$) |
 | **6** | $R_{\mathrm{NS}}=4\lambda_{n}^2/\ell_{P}=10.916\ \mathrm{km}$ | $\alpha_{G}=1/F_{\star}=5.922\times 10^{-39}$ | Gravity & TOV Collapse | Nuclear force diluted over $F_{\star}=(\lambda_{n}/\ell_{P})^2=1.688\times 10^{38}$ Planck facets; $M_{\mathrm{TOV}}\in[2.04,2.15]\ M_{\odot}$ |
 | **7** | $r\sim 1\text{--}100\ \mathrm{kpc}$ | $\Omega_{\mathrm{DM}}=23.81\text{--}23.88$% | Cold Dark Matter Halo | $3:1$ exterior potential flow ($75$% surrounding) + two-sided `0`-horizon anchor tension $E_{\mathrm{DM}}^\star$ |
 | **8** | $\lambda_{\max}=2R_{H}=2.76\times 10^{26}\ \mathrm{m}$ | $\Omega_{\mathrm{DE}}=70.88\text{--}71.14$% | Dark Energy ($w_{\mathrm{DE}}=-1$) | Open-valve winding transfer $dE_{\mathrm{DE}}^\star=(-\frac{1}{3}+\frac{4}{3})\rho_{\mathrm{DE}} dV_-=+\rho_{\mathrm{DE}} dV_-$ across birth `0` valve |
 
-### 8.2 Complete Subatomic-to-Cosmological Observer Dictionary (`A0--A4`)
+### 9.2 Complete Subatomic-to-Cosmological Observer Dictionary (`A0--A4`)
 
 To make the unification explicit for working physicists, the table below maps
 each textbook construct of quantum mechanics, nuclear physics, and cosmology to
@@ -843,10 +1073,12 @@ its exact geometric identity in Nested-Space Cosmology:
 | **QCD flux-tube string breaking** | Non-perturbative gluon flux tube + $\bar q q$ creation | Above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2$, bubble stretches into 1D filament $\sigma_{\mathrm{eff}}\lambda_{3}$ and pinches (`1 -> 2` fission at $\Delta E=4$) | **Theorem 2(4)**, Paper I Thm 1 |
 | **Fine-structure constant $\alpha_{\mathrm{EM}}$** | Unexplained running $U(1)$ gauge coupling | 3D-to-1D spherical-toroidal phase-space impedance across $E^\star=4$ core ($4\pi^3$), 2D torus ($\pi^2$), and 1D loop ($\pi$) | $\alpha_{\mathrm{geom}}^{-1}=4\pi^3+\pi^2+\pi=137.0363$ (**Theorem 3(1)**) |
 | **Electron spin $g_s=2$ & Pauli $2n^2$** | Abstract spinor representation of Lorentz group | Two orthogonal helical buckling handednesses $+\omega^\star$ (right) and $-\omega^\star$ (left) of **Axiom A1** times $n^2$ $S^2$ harmonics | $N_{\mathrm{shell}}(n)=2n^2$ (**Theorem 3(3)**) |
-| **Weak force ($G_{F}, g_{A}, \tau_{n}$)** | Spontaneous $SU(2) _{L}\times U(1) _{Y}$ Higgs breaking | Balloon-in-balloon neighbor counter-pressure ($W_{\mathrm{confine}}>\Delta E_{np}$); vacuum venting across $\gamma_{\mathrm{core}}^5 e^{-12}=1.010\times 10^{-5}$ | **Theorem 4(1--3)** |
-| **Nuclear fission ($^{235}\mathrm{U}, ^{252}\mathrm{Cf}$)** | Liquid-drop Bohr--Wheeler parameterization | Two-center equipotential neck pinch ($p^3-3p-3=0\Rightarrow p_+=2.1038034$) at $(Z^2/A) _{\mathrm{crit}}=2a_{S}/a_{C}=47.4\text{--}48.4$ | **Theorem 5**, Paper I Thm 4--5 |
+| **Magnetic field $\mathbf B$ & Lorentz $q\mathbf v\times\mathbf B$** | Separate magnetic field + axiomatic Lorentz force | Exterior phase-flow vorticity $\mathbf B=\nabla\times\mathbf A$ ($\nabla\cdot\mathbf B\equiv 0$, $\Phi_0=h/(2e)$) + transverse Magnus stretch gradient ($\mathbf v\cdot\mathbf F_{\mathrm{mag}}\equiv 0$) | **Prop. 6.1**, **Theorem 4(1)** |
+| **Nucleon moments $\mu_{p},\mu_{n}$ & $r_p$** | Fractional $(+\frac{2}{3}e,-\frac{1}{3}e)$ constituent quarks ($\mu_{n}/\mu_{p}=-2/3$) | `3:1` Virial cavity $r_{p}=4\lambda_{p}=0.841\ \mathrm{fm}$, $15/16$ proton chiral shell & $6$-face $-e$ neutron shell: $\mu_{n}/\mu_{p}=-(8+16\sqrt{2})/(23+15\sqrt{2})=-0.684975$ ($-6.65\ \mathrm{ppm}$) | **Theorem 4(2--4)** |
+| **Weak force ($G_{F}, g_{A}, \tau_{n}$)** | Spontaneous $SU(2) _{L}\times U(1) _{Y}$ Higgs breaking | Balloon-in-balloon neighbor counter-pressure ($W_{\mathrm{confine}}>\Delta E_{np}$); vacuum venting across $\gamma_{\mathrm{core}}^5 e^{-12}=1.010\times 10^{-5}$ | **Theorem 5(1--3)** |
+| **Nuclear fission ($^{235}\mathrm{U}, ^{252}\mathrm{Cf}$)** | Liquid-drop Bohr--Wheeler parameterization | Two-center equipotential neck pinch ($p^3-3p-3=0\Rightarrow p_+=2.1038034$) at $(Z^2/A) _{\mathrm{crit}}=2a_{S}/a_{C}=47.4\text{--}48.4$ | **Theorem 6**, Paper I Thm 4--5 |
 
-### 8.3 Epistemic Hygiene and Explicit Quarantine Ledger
+### 9.3 Epistemic Hygiene and Explicit Quarantine Ledger
 
 In keeping with the strict verification standards of Paper I (`v0.27.0`), we
 partition every mathematical claim of Paper II into three explicit epistemic
@@ -873,29 +1105,46 @@ classes:
      $N_{\mathrm{shell}}(n)=2\sum_{l=0}^{n-1}(2l+1)=2n^2$ from $S^2$ harmonics
      times **Axiom A1** helical handedness $\pm\omega^\star$ (**Proposition 5.1**,
      **Theorem 3(2--3)**).
+   - Exterior vorticity identity $\nabla\cdot\mathbf B=\nabla\cdot(\nabla\times\mathbf A)\equiv 0$,
+     topological flux quantum $\Phi_{0}=h/(2e)$, Euler--Lagrange / Lamb--Magnus
+     Lorentz force $\mathbf F=q(\mathbf E+\mathbf v\times\mathbf B)$ with
+     $\mathbf v\cdot(q\mathbf v\times\mathbf B)\equiv 0$, orbital $g_{L}=1$, bare
+     helical $g_{0}=2$, proton `3:1` Virial cavity radius $r_{p,\mathrm{NSC}}=E^\star(1,1,1)\lambda_{p}=4\lambda_{p}=0.84124\ \mathrm{fm}$,
+     and exterior chiral-shell area fraction $1-(\lambda_{p}/r_{p,\mathrm{NSC}})^2=15/16$
+     (**Proposition 6.1**, **Theorem 4(1--3)**).
    - Balloon-in-balloon neighbor stabilization $\Delta G_{\mathrm{vent}}(N_{\mathrm{coord}}\ge 1)>0$
-     (**Theorem 4(1)**) and two-center equipotential neck fission cubic
-     $p^3-3p-3=0$ ($p_+=2.1038034$, **Theorem 5**).
-2. **Class II — Geometric Phase-Space Impedance and Cascade-Conductance Mechanism Evaluations:**
+     (**Theorem 5(1)**) and two-center equipotential neck fission cubic
+     $p^3-3p-3=0$ ($p_+=2.1038034$, **Theorem 6**).
+2. **Class II — Geometric Phase-Space Impedance, Chiral-Shell Moment, and Cascade-Conductance Mechanism Evaluations:**
    - The 3D-to-1D spherical-toroidal impedance decomposition
      $\alpha_{\mathrm{geom}}^{-1}=4\pi^3+\pi^2+\pi=137.036304$ ($+2.22\ \mathrm{ppm}$
-     from CODATA $137.035999$, **Theorem 3(1)**), where the residual
-     $3.05\times 10^{-4}$ corresponds to higher-order toroidal neck curvature.
+     from CODATA $137.035999$, **Theorem 3(1)**), together with the impedance-dressed
+     electron helical moment $g_{e,\mathrm{NSC}}^{(1)}=2.00232281$ ($+1.75\ \mathrm{ppm}$)
+     and 2-loop toroidal recoil $g_{e,\mathrm{NSC}}^{(2)}=2.002319270$ ($-0.017\ \mathrm{ppm}$,
+     **Theorem 4(1)**).
+   - The neutron 6-face boundary-winding mean-square charge radius
+     $\langle r_{E}^2\rangle _{n,\mathrm{NSC}}=-\frac{1}{6}r_{p,\mathrm{NSC}}^2=-0.11795\ \mathrm{fm}^2$
+     ($1.59$% from PDG $-0.1161\ \mathrm{fm}^2$), 3-axis chiral spin factor
+     $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.276142$ ($+0.058$% from
+     experimental $1.2754$), neutron moment $\mu_{n,\mathrm{NSC}}=-\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_{N}=-1.914214\ \mu_{N}$
+     ($+0.061$%), proton moment $\mu_{p,\mathrm{NSC}}=(1+\frac{45}{32}g_{A,\mathrm{NSC}})\mu_{N}=+2.794575\ \mu_{N}$
+     ($+0.062$%), parameter-free ratio $\mu_{n,\mathrm{NSC}}/\mu_{p,\mathrm{NSC}}=-\frac{8+16\sqrt{2}}{23+15\sqrt{2}}=-0.6849748$
+     ($-6.65\ \mathrm{ppm}$), deuteron moment $\mu_{d,\mathrm{NSC}}=+0.85845\ \mu_{N}$
+     ($+0.118$%), and 21-cm hydrogen hyperfine frequency $\nu_{21\mathrm{cm},\mathrm{NSC}}=1421.35\ \mathrm{MHz}$
+     ($+0.067$%, **Theorem 4(2--4)**).
    - The barrier-dressed four-cascade valve conductance
      $g_{\mathrm{vent,NSC}}=\gamma_{\mathrm{core}}^5 e^{-4\chi_{\mathrm{freeze}}}=1.01023\times 10^{-5}$
-     ($-1.62$% from experimental $\alpha_W=1.02683\times 10^{-5}$) and 3-axis
-     axial-vector coupling $g_{A,\mathrm{NSC}}=1+\frac{1}{4}\gamma_{\mathrm{core}}=1.27614$
-     ($+0.058$% from experimental $1.2754$, **Theorem 4(2--3)**).
+     ($-1.62$% from experimental $\alpha_W=1.02683\times 10^{-5}$, **Theorem 5(2)**).
 3. **Class III — Explicitly Quarantined Numerical Coincidences (Not Claimed as First-Principles Proofs):**
    - *Neutron--proton mass difference $\Delta E_{np}=(m_{n}-m_{p})c^2=1.29333\ \mathrm{MeV}=2.53099\ m_{e} c^2$:*
      While the empirical value $2.5310\ m_e c^2$ lies within $0.17$% of the
      cascade-dressed combination $\left(2+\frac{1}{2}+e^{-3}/\sqrt{2}\right)m_{e} c^2=2.5352\ m_{e} c^2$,
-     **Theorem 4** takes the measured $\Delta E_{np}=1.29333\ \mathrm{MeV}$ as an
+     **Theorem 5** takes the measured $\Delta E_{np}=1.29333\ \mathrm{MeV}$ as an
      explicit input and quarantines the $2.5352\ m_e c^2$ expression until the
      full 3+1D toroidal electromagnetic + winding self-energy boundary value
      problem of the excited `(1,1,1)` triad is solved.
    - *Electron-to-baryon Compton scale ratio $\lambda_{e}/\lambda_{p}=m_{p}/m_{e}=1836.15267$:*
-     In **Theorem 3**, $\lambda_{e}=\hbar/(m_{e} c)$ is used as the 1D azimuthal loop
+     In **Theorems 3--4**, $\lambda_{e}=\hbar/(m_{e} c)$ is used as the 1D azimuthal loop
      scale; deriving $m_{p}/m_{e}=6\pi^5=1836.118$ ($-18.8\ \mathrm{ppm}$) from the
      ratio of 3D `(1,1,1)` core phase volume to 1D loop phase volume remains an
      open geometric boundary-value problem quarantined from the exact theorems.
@@ -913,10 +1162,11 @@ suite without external parameters or curve fitting:
   - `single_force_facet_dilution_bridge()` (**Theorem 1**)
   - `strong_nuclear_triad_confinement()` (**Theorem 2**)
   - `atomic_shell_and_em_impedance()` (**Proposition 5.1 & Theorem 3**)
-  - `weak_balloon_in_balloon_venting()` (**Theorem 4**)
-  - `nuclear_binding_and_fission_neck()` (**Theorem 5**)
-  - `unified_resolution_hierarchy_readout()` (**Theorem 6**)
-- **Automated Unit Test Suite (`7/7` tests):** [`tests/test_force_at_resolutions.py`](../tests/test_force_at_resolutions.py)
+  - `magnetic_vorticity_and_moments()` (**Proposition 6.1 & Theorem 4**)
+  - `weak_balloon_in_balloon_venting()` (**Theorem 5**)
+  - `nuclear_binding_and_fission_neck()` (**Theorem 6**)
+  - `unified_resolution_hierarchy_readout()` (**Theorem 7**)
+- **Automated Unit Test Suite (`8/8` tests):** [`tests/test_force_at_resolutions.py`](../tests/test_force_at_resolutions.py)
 - **Figure & JSON Artifact Generator:** [`scripts/plot_force_at_resolutions.py`](../scripts/plot_force_at_resolutions.py) -> [`results/nsc-force-at-resolutions-v1.json`](../results/nsc-force-at-resolutions-v1.json)
 - **Canonical ReportLab + Mathtext PDF Builder:** [`scripts/build_paper_2.py`](../scripts/build_paper_2.py) -> [`paper/nested-space-cosmology-2.pdf`](nested-space-cosmology-2.pdf)
 

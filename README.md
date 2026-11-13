@@ -1,6 +1,6 @@
 # Nested-Space Cosmology: The Geometry of a Universe II — Force at Resolutions
 
-**Douglas Ek** · Foundation Edition II (`v0.2.0`) · [Illustrated PDF](paper/nested-space-cosmology-2.pdf) · [Manuscript Source](paper/nested-space-cosmology-2.md) · [Paper I (`v0.27.0`, Zenodo `10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258)
+**Douglas Ek** · Foundation Edition II (`v0.3.0`) · [Illustrated PDF](paper/nested-space-cosmology-2.pdf) · [Manuscript Source](paper/nested-space-cosmology-2.md) · [Paper I (`v0.27.0`, Zenodo `10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258)
 
 ---
 
@@ -51,11 +51,23 @@ What textbook physics partitions into separate force fields and exchange particl
    N_{\mathrm{shell}}(n) = 2\sum_{l=0}^{n-1}(2l+1) = 2n^2 = 2,\ 8,\ 18,\ 32,\ 50,\ 72.
    $$
 
-4. **"The Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting (`Theorem 4`):**
-   Inside a multi-nucleon nucleus, neighboring `(1,1,1)` bubbles exert external confining counter-pressure $\Delta P_{\mathrm{neighbors}}$ — like a balloon inside another balloon — supplying confining work $W_{\mathrm{confine}} \ge 2.225\ \mathrm{MeV} > \Delta E_{np} = 1.293\ \mathrm{MeV}$ that locks the neutron in thermodynamic equilibrium. Removed into empty space ($\Delta P_{\mathrm{neighbors}} = 0$), an isolated neutron lacks external counter-pressure and vents its excess 1D boundary winding across the two-valve cascade barrier ($e^{-4\chi_{\mathrm{freeze}}} = e^{-12} = 6.144\times 10^{-6}$, and with the 5D barrier factor $\gamma_{\mathrm{core}}^5 e^{-12} = 1.010\times 10^{-5}$ vs. experimental $G_{F} m_{p}^2 c/\hbar^3 = 1.027\times 10^{-5}$), with 3-axis axial coupling $g_{A} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$ (experimental $1.2754$) and full Fermi phase-space lifetime $\tau_{\mathrm{vent}} = 878.0\text{--}882.0\ \mathrm{s}$ (observed $877.75\ \mathrm{s}$).
+4. **"Magnetism", Lorentz $q\mathbf{v}\times\mathbf{B}$ Deflection, Electron $g_{e}$, and `(1,1,1)` Nucleon Magnetic Moments (`Theorem 4`):**
+   Magnetism is not a separate field alongside electrostatics: it is the exterior vorticity $\mathbf{B} = \nabla\times\mathbf{A}$ of the same $75$% potential flow (**Axiom A0–A1**), giving $\nabla\cdot\mathbf{B} \equiv 0$ identically (no magnetic monopoles), quantized room-woven flux $\Phi_{0} = h/(2e)$, and the transverse Magnus/Bernoulli pressure-gradient deflection $\mathbf{F} = q(\mathbf{E} + \mathbf{v}\times\mathbf{B})$ with $\mathbf{v}\cdot(q\mathbf{v}\times\mathbf{B}) \equiv 0$. Intrinsic **Axiom A1–A2** helical buckling at $\lambda_{e}$ yields exact bare $g_{0} = 2$ and self-flow dressed $g_{e}^{(2)} = 2.002319270$ ($-0.017\ \mathrm{ppm}$ vs. CODATA). Inside the `(1,1,1)` baryon cavity ($r_{p,\mathrm{NSC}} = 4\lambda_{p} = 0.84124\ \mathrm{fm}$, $+0.058$% vs. CODATA; neutron $\langle r_{E}^2\rangle _{n} = -\frac{1}{6}r_{p}^2 = -0.1179\ \mathrm{fm}^2$), the 3-axis chiral spin factor $g_{A,\mathrm{NSC}} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$ gives parameter-free proton and neutron magnetic moments **without fractional quarks**:
+   $$
+   \mu_{n,\mathrm{NSC}} = -\frac{3}{2}g_{A,\mathrm{NSC}}\ \mu_{N} = -1.9142\ \mu_{N},\qquad
+   \mu_{p,\mathrm{NSC}} = \left(1 + \frac{45}{32}g_{A,\mathrm{NSC}}\right)\mu_{N} = +2.7946\ \mu_{N},\qquad
+   \frac{\mu_{n,\mathrm{NSC}}}{\mu_{p,\mathrm{NSC}}} = -\frac{8+16\sqrt{2}}{23+15\sqrt{2}} = -0.684975\ (-6.65\ \mathrm{ppm}),
+   $$
+   matching CODATA ($\mu_{n} = -1.9130\ \mu_{N}$ within $+0.061$%, $\mu_{p} = +2.7928\ \mu_{N}$ within $+0.062$%), along with deuteron moment $\mu_{d,\mathrm{NSC}} = +0.8584\ \mu_{N}$ ($+0.12$%) and the cosmological 21-cm hydrogen hyperfine line $\nu_{21\mathrm{cm}} = 1421.35\ \mathrm{MHz}$ ($\lambda = 21.09\ \mathrm{cm}$, $+0.067$%).
 
-5. **Multi-Nucleon Packing & Heavy-Nucleus Fission from the Paper I Two-Center Neck Equation (`Theorem 5`):**
+5. **"The Weak Force" as Balloon-in-Balloon Pressure-Chamber Venting (`Theorem 5`):**
+   Inside a multi-nucleon nucleus, neighboring `(1,1,1)` bubbles exert external confining counter-pressure $\Delta P_{\mathrm{neighbors}}$ — like a balloon inside another balloon — supplying confining work $W_{\mathrm{confine}} \ge 2.225\ \mathrm{MeV} > \Delta E_{np} = 1.293\ \mathrm{MeV}$ that locks the neutron in thermodynamic equilibrium. Removed into empty space ($\Delta P_{\mathrm{neighbors}} = 0$), an isolated neutron lacks external counter-pressure and vents its excess 1D boundary winding across the two-valve cascade barrier ($e^{-4\chi_{\mathrm{freeze}}} = e^{-12} = 6.144\times 10^{-6}$, and with the 5D barrier factor $\gamma_{\mathrm{core}}^5 e^{-12} = 1.010\times 10^{-5}$ vs. experimental $G_{F} m_{p}^2 c/\hbar^3 = 1.027\times 10^{-5}$), with the same 3-axis axial coupling $g_{A,\mathrm{NSC}} = 1 + \frac{1}{4}\gamma_{\mathrm{core}} = 1.27614$ (experimental $1.2754$) and full Fermi phase-space lifetime $\tau_{\mathrm{vent}} = 878.0\text{--}882.0\ \mathrm{s}$ (observed $877.75\ \mathrm{s}$).
+
+6. **Multi-Nucleon Packing & Heavy-Nucleus Fission from the Paper I Two-Center Neck Equation (`Theorem 6`):**
    Packing $A$ `(1,1,1)` bubbles with derived **Axiom A1** chiral pairing $a_{P} = \frac{3}{4}a_{V} = 11.695\ \mathrm{MeV}$ reproduces the nuclear binding curve $B(A,Z)/A$ (peaking at $^{56}\mathrm{Fe}\text{--}^{62}\mathrm{Ni}$ at $8.79\text{--}8.81\ \mathrm{MeV}$, vs. empirical $8.79\text{--}8.80\ \mathrm{MeV}$) and proves that heavy-nucleus fission ($^{235}\mathrm{U}$, $^{238}\mathrm{U}$, $^{252}\mathrm{Cf}$ above critical fissility $(Z^2/A) _{\mathrm{crit}} = 2a_{S}/a_{C} = 47.37\text{--}48.42$) obeys the **exact same two-center equipotential neck equation and Cardano cubic** $p^3 - 3p - 3 = 0$ ($p_+ = \varphi^{2/3}+\varphi^{-2/3} = 2.1038034$) as cosmological bubble division in Paper I.
+
+7. **The Unified Eight-Tier Resolution Hierarchy (`Theorem 7`):**
+   Unifies all eight resolution tiers across the $141.0$ e-folds ($\approx 47\times\chi_{\mathrm{freeze}}$) between the Planck ceiling $\ell_{P}$ and the Absolute-Zero horizon $2R_{H}$ with zero adjustable force couplings.
 
 ---
 
@@ -65,8 +77,8 @@ What textbook physics partitions into separate force fields and exchange particl
 | --- | --- | --- | --- | --- |
 | **1. Planck Ceiling** | $\ell_P = 1.616\times 10^{-35}\ \mathrm{m}$ | $1$ | Quantum Gravity Cutoff | Minimum facet size $\mathcal R(0) = \ell_P > 0$; 1D pen resets and draws out child room (`+ -> 0 -> -`) |
 | **2. Two-Valve Neck** | $e^{-3}\lambda_n = 1.046\times 10^{-17}\ \mathrm{m}$ | $\gamma_{\mathrm{core}}^5 e^{-12} = 1.010\times 10^{-5}$ | Weak Force ($G_{F} m_{p}^2 = 1.027\times 10^{-5}$) | Balloon-in-balloon pressure relief when a `(1,1,1)` neutron loses neighbor counter-pressure ($\tau_n=878\text{--}882\ \mathrm{s}$) |
-| **3. Baryon `(1,1,1)` Core** | $\lambda_n = 2.100\times 10^{-16}\ \mathrm{m}$ | $\alpha_S \equiv 1$ | Strong Force & Confinement | Undivided 3-axis stretch ($E^\star=4$), $-2m_0/d$ shared flow, $+3.3137$ hard core & $\sigma_{\mathrm{eff}}\lambda_{3}$ filament |
-| **4. Atomic 1D Loop** | $a_0 = 5.292\times 10^{-11}\ \mathrm{m}$ | $(4\pi^3+\pi^2+\pi)^{-1} = 1/137.0363$ | Electromagnetism & Shells | 3D-to-1D spherical-toroidal impedance; quantized shells $r_{n}^\star = n^2 a_{0}$, capacities $2n^2 = 2,8,18,32$ |
+| **3. Baryon `(1,1,1)` Core** | $\lambda_n = 2.100\times 10^{-16}\ \mathrm{m}$ | $\alpha_S \equiv 1$ | Strong Force & Nucleon Moments | Undivided 3-axis stretch ($E^\star=4$), $r_{p} = 4\lambda_{p} = 0.841\ \mathrm{fm}$, $\mu_{n}/\mu_{p} = -0.684975$ ($-6.65\ \mathrm{ppm}$), $+3.3137$ hard core & $\sigma_{\mathrm{eff}}\lambda_{3}$ string |
+| **4. Atomic Loop & Magnetism** | $a_0 = 5.292\times 10^{-11}\ \mathrm{m}$ | $(4\pi^3+\pi^2+\pi)^{-1} = 1/137.0363$ | Electromagnetism, Shells & $\mathbf{B}=\nabla\times\mathbf{A}$ | 3D-to-1D impedance; shells $r_{n}^\star = n^2 a_{0}$, capacities $2n^2$; Magnus $q\mathbf{v}\times\mathbf{B}$, $g_{e}^{(2)} = 2.00231927$, 21-cm line $1421.35\ \mathrm{MHz}$ |
 | **5. Helium Floor Weave** | $\lambda_{\mathrm{dB}}(T_{\lambda}) = 5.92\ \mathrm{\AA}$ | $\Delta\chi_{\mathrm{unfreeze}} = 2.94 \approx \chi_{\mathrm{freeze}} = 3$ | Superfluidity & Wave–Particle Floor | Logarithmic cooling widens $^4\mathrm{He}$ cloud exponentially ($e^3 R_{\mathrm{He}}=6.30\ \mathrm{\AA}$, $P_{\mathrm{solid}}=25.10\ \mathrm{atm}$, $T_\lambda=2.161\ \mathrm{K}$), weaving into room span $2R$ ($\eta=0$) |
 | **6. Stellar Facet Limit** | $R_{\mathrm{NS}} = 4\lambda_{n}^2/\ell_{P} = 10.916\ \mathrm{km}$ | $\alpha_{G} = 1/F_{\star} = 5.922\times 10^{-39}$ | Gravity & TOV Collapse | Nuclear force diluted over $F_{\star} = (\lambda_{n}/\ell_{P})^2 = 1.688\times 10^{38}$ Planck facets; $M_{\mathrm{TOV}}\in[2.04,2.15]\ M_{\odot}$ |
 | **7. Galactic Halo** | $r \sim 1\text{--}100\ \mathrm{kpc}$ | $\Omega_{\mathrm{DM}} = 23.81\text{--}23.88$% | Cold Dark Matter | $3:1$ exterior potential flow ($75$% surrounding) + two-sided `0`-horizon anchor tension $E_{\mathrm{DM}}^\star$ |

@@ -7,6 +7,7 @@ import math
 from nsc_force_resolutions import (
     atomic_shell_and_em_impedance,
     helium_absolute_zero_wave_particle_bridge,
+    magnetic_vorticity_and_moments,
     nuclear_binding_and_fission_neck,
     single_force_facet_dilution_bridge,
     strong_nuclear_triad_confinement,
@@ -84,7 +85,33 @@ def test_theorem_3_atomic_shell_and_em_impedance() -> None:
     assert radii_ratios == [1, 4, 9, 16, 25, 36]
 
 
-def test_theorem_4_weak_balloon_in_balloon_venting() -> None:
+def test_theorem_4_magnetic_vorticity_and_moments() -> None:
+    res = magnetic_vorticity_and_moments()
+    # Exact transverse Lorentz / Magnus zero-work identity and paired Cooper flux quantum
+    assert res["lorentz_work_rate_residual"] < 1e-16
+    assert math.isclose(res["flux_quantum_single_wb"], 2.0 * res["flux_quantum_cooper_wb"], rel_tol=1e-15)
+    assert res["g_orbital_exact"] == 1.0
+    assert res["g_helix_bare_exact"] == 2.0
+    # Electron anomalous moment from alpha_geom = (4 pi^3 + pi^2 + pi)^-1
+    assert abs(res["rel_diff_g_e_1loop_ppm"]) < 2.0
+    assert abs(res["rel_diff_g_e_2loop_ppm"]) < 0.05
+    # Proton RMS charge radius r_p = 4 * lambda_p and negative neutron <r_E^2>_n
+    assert res["rel_diff_r_proton"] < 0.001  # within 0.06% of CODATA 0.84075 fm
+    assert res["r2_neutron_nsc_fm2"] < 0.0
+    assert res["rel_diff_r2_neutron"] < 0.02  # within 1.6% of PDG -0.1161 fm^2
+    # Proton and neutron magnetic moments & -0.684975 ratio (within 7 ppm of CODATA!)
+    assert math.isclose(res["exterior_shell_area_fraction_15_16"], 15.0 / 16.0, rel_tol=1e-15)
+    assert math.isclose(res["mu_neutron_nsc_mun"], -(0.5 + math.sqrt(2.0)), rel_tol=1e-15)
+    assert res["rel_diff_mu_neutron"] < 0.001
+    assert res["rel_diff_mu_proton"] < 0.001
+    assert abs(res["rel_diff_ratio_ppm"]) < 10.0
+    assert abs(res["su6_quark_error_ppm"]) > 25000.0
+    # Deuteron magnetic moment and 21-cm hydrogen hyperfine line
+    assert res["rel_diff_mu_deuteron"] < 0.002
+    assert res["rel_diff_21cm"] < 0.001
+
+
+def test_theorem_5_weak_balloon_in_balloon_venting() -> None:
     res = weak_balloon_in_balloon_venting()
     assert res["is_stable_in_deuteron"] is True
     assert res["is_unstable_in_vacuum"] is True
@@ -96,7 +123,7 @@ def test_theorem_4_weak_balloon_in_balloon_venting() -> None:
     assert 875.0 <= res["tau_vent_with_exp_gf_s"] <= 882.0
 
 
-def test_theorem_5_nuclear_binding_and_fission_neck() -> None:
+def test_theorem_6_nuclear_binding_and_fission_neck() -> None:
     res = nuclear_binding_and_fission_neck()
     assert 47.0 <= res["fissility_crit_z2_over_a"] <= 49.0
     assert math.isclose(res["fissility_crit_upper_z2_over_a"], 48.51, rel_tol=2e-3)
@@ -113,9 +140,10 @@ def test_theorem_5_nuclear_binding_and_fission_neck() -> None:
     assert abs(by_name["Pb-208"]["Z_star_beta_valley"] - 82.0) < 1.0
 
 
-def test_theorem_6_unified_resolution_hierarchy() -> None:
+def test_theorem_7_unified_resolution_hierarchy() -> None:
     res = unified_resolution_hierarchy_readout()
     assert len(res["resolution_tiers"]) == 8
     assert res["room_dynamic_range_b"] > 1e61
     assert 46.5 <= res["room_3axis_cascade_cycles"] <= 47.5
     assert "proposition_2_1_helium_bridge" in res
+    assert "theorem_4_magnetism_moments" in res
