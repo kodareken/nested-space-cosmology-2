@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.cff text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.pdf binary
+*.png binary
+
+# Scientific owners, manuscript sources, and authenticated build inputs retain exact bytes.
+src/** -text
+scripts/** -text
+tests/** -text
+results/** -text
+paper/** -text

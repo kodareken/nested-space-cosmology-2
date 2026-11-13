@@ -4,11 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nsc-force-resolutions"
-version = "0.1.0"
-description = "Nested-Space Cosmology II: Force at Resolutions — Atoms, Subatoms, and the Single Thermodynamic Pressure Gradient"
+version = "0.2.0"
+description = "Nested-Space Cosmology II: Force at Resolutions — Wave–Particle Duality, Helium at the Absolute-Zero Floor, and the Single Thermodynamic Pressure Gradient"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.11"
 authors = [{ name = "Douglas Ek" }]
+
+[project.urls]
+Homepage = "https://github.com/kodareken/nested-space-cosmology-2"
+Repository = "https://github.com/kodareken/nested-space-cosmology-2"
 
 [tool.setuptools.packages.find]
 where = ["src"]

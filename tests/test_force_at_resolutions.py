@@ -6,6 +6,7 @@ import math
 
 from nsc_force_resolutions import (
     atomic_shell_and_em_impedance,
+    helium_absolute_zero_wave_particle_bridge,
     nuclear_binding_and_fission_neck,
     single_force_facet_dilution_bridge,
     strong_nuclear_triad_confinement,
@@ -14,8 +15,33 @@ from nsc_force_resolutions import (
 )
 
 
+def test_proposition_2_1_helium_absolute_zero_wave_particle_bridge() -> None:
+    res = helium_absolute_zero_wave_particle_bridge()
+    # Doubly closed He-4 core + n=1 (+/- omega*) shell
+    assert res["alpha_vent_margin_mev"] > 19.0
+    assert math.isclose(res["z_eff_he_screened"], 27.0 / 16.0, rel_tol=1e-15)
+    assert -78.0 <= res["e_he_ground_nsc_ev"] <= -77.0
+    # Zero-point stretch exceeds van der Waals well -> never freezes at 1 atm
+    assert res["never_freezes_at_1atm"] is True
+    assert res["q_zpe_cell_k"] > res["eps_vdw_k"]
+    assert res["q_zpe_k"] > 2.2 * res["eps_vdw_k"]
+    assert res["de_boer_lambda_star"] > 2.55
+    assert 24.0 <= res["p_solid_nsc_atm"] <= 26.0
+    # Paper I Theorem 3 added mass (3/2 M_He) shifts BEC 3.14 K -> 2.09-2.16 K (exp 2.172 K)
+    assert math.isclose(res["added_mass_factor_3_over_2"], 1.5, rel_tol=1e-15)
+    assert res["rel_diff_t_lambda"] < 0.01
+    # Unfreezing e^3 expansion at T_lambda matches chi_freeze = 3 within 2.5%
+    assert 2.90 <= res["chi_unfreeze_at_t_lambda"] <= 3.05
+    # Exponential cloud slope explosion near Absolute Zero
+    ladder = {row["temperature_k"]: row for row in res["de_broglie_ladder"]}
+    assert ladder[1.0e-3]["dlambda_dt_pm_per_k"] > 1e7 * ladder[300.0]["dlambda_dt_pm_per_k"]
+    assert ladder[1.0e-9]["superfluid_zero_friction_fraction"] > 0.999999
+
+
 def test_theorem_1_single_force_facet_dilution_bridge() -> None:
     res = single_force_facet_dilution_bridge()
+    assert math.isclose(res["baryon_compton_wavelength_m"], 2.10019415e-16, rel_tol=1e-6)
+    assert math.isclose(res["proton_compton_wavelength_m"], 2.10308910e-16, rel_tol=1e-6)
     assert math.isclose(res["n_1d_resolution_ratio"], 1.29942005e19, rel_tol=1e-6)
     assert math.isclose(res["f_star_facet_capacity"], 1.68849246e38, rel_tol=1e-6)
     # Exact algebraic bridge: F_grav = F_nuclear / F_star and alpha_G = 1 / F_star
@@ -41,6 +67,9 @@ def test_theorem_2_strong_nuclear_triad_confinement() -> None:
     assert math.isclose(res["chi_spaghetti"], 0.5 * math.log(2.0), rel_tol=1e-15)
     assert res["theta_spaghetti"] == 0.5
     assert res["lambda_3_snap_normalized"] == 8.0
+    prof = {row["d_over_r_star"]: row["delta_e_norm"] for row in res["potential_profile"]}
+    assert math.isclose(prof[0.0], res["hard_core_barrier_delta_e"], rel_tol=1e-15)
+    assert math.isclose(prof[2.0], -1.0, rel_tol=1e-15)
 
 
 def test_theorem_3_atomic_shell_and_em_impedance() -> None:
@@ -48,7 +77,7 @@ def test_theorem_3_atomic_shell_and_em_impedance() -> None:
     expected_inv = 4.0 * (math.pi ** 3) + (math.pi ** 2) + math.pi
     assert math.isclose(res["alpha_geom_inv"], expected_inv, rel_tol=1e-15)
     assert abs(res["relative_diff_ppm"]) < 2.5
-    assert math.isclose(res["bohr_radius_geom_m"], 5.29177e-11, rel_tol=1e-5)
+    assert math.isclose(res["bohr_radius_geom_m"], 5.29178e-11, rel_tol=1e-5)
     capacities = [s["shell_capacity_2n2"] for s in res["shells"]]
     assert capacities == [2, 8, 18, 32, 50, 72]
     radii_ratios = [s["r_n_over_a0"] for s in res["shells"]]
@@ -62,21 +91,31 @@ def test_theorem_4_weak_balloon_in_balloon_venting() -> None:
     assert res["net_deuteron_stability_margin_mev"] > 0.9
     assert math.isclose(res["bare_valve_conductance_e_minus_12"], math.exp(-12.0), rel_tol=1e-15)
     assert res["rel_diff_g_fermi"] < 0.02  # within 1.7% of experimental G_F * m_p^2
+    assert res["rel_diff_g_axial"] < 0.001  # g_A = 1.2761 within 0.06% of experimental 1.2754
+    assert 870.0 <= res["tau_vent_estimate_s"] <= 920.0
+    assert 875.0 <= res["tau_vent_with_exp_gf_s"] <= 882.0
 
 
 def test_theorem_5_nuclear_binding_and_fission_neck() -> None:
     res = nuclear_binding_and_fission_neck()
     assert 47.0 <= res["fissility_crit_z2_over_a"] <= 49.0
+    assert math.isclose(res["fissility_crit_upper_z2_over_a"], 48.51, rel_tol=2e-3)
+    assert math.isclose(res["a_pair_mev"], 0.75 * res["a_vol_mev"], rel_tol=1e-15)
     assert math.isclose(res["neck_cubic_root_p_plus"], 2.1038034027, rel_tol=1e-9)
     by_name = {row["nucleus"]: row for row in res["sample_nuclei"]}
     # Iron/Nickel peak > Uranium binding per nucleon
     assert by_name["Fe-56"]["B_per_A_mev"] > by_name["U-235"]["B_per_A_mev"]
     assert 8.4 <= by_name["Fe-56"]["B_per_A_mev"] <= 9.0
     assert 7.4 <= by_name["U-235"]["B_per_A_mev"] <= 7.8
+    # Beta-stability valley Z*(A) matches stable nuclei closely
+    assert abs(by_name["He-4"]["Z_star_beta_valley"] - 2.0) < 0.1
+    assert abs(by_name["Fe-56"]["Z_star_beta_valley"] - 26.0) < 1.0
+    assert abs(by_name["Pb-208"]["Z_star_beta_valley"] - 82.0) < 1.0
 
 
 def test_theorem_6_unified_resolution_hierarchy() -> None:
     res = unified_resolution_hierarchy_readout()
-    assert len(res["resolution_tiers"]) == 7
+    assert len(res["resolution_tiers"]) == 8
     assert res["room_dynamic_range_b"] > 1e61
     assert 46.5 <= res["room_3axis_cascade_cycles"] <= 47.5
+    assert "proposition_2_1_helium_bridge" in res

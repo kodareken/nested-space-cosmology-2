@@ -1,11 +1,108 @@
 {
+  "proposition_2_1_helium_bridge": {
+    "b_alpha_exp_mev": 28.29566,
+    "s_n_alpha_mev": 20.57762,
+    "alpha_vent_margin_mev": 19.284287659999993,
+    "z_eff_he_screened": 1.6875,
+    "r_he_cloud_m": 3.135864953721826e-11,
+    "lambda_weave_e3_m": 6.298553131410993e-10,
+    "lambda_db_bare_at_t_lambda_m": 5.921052577058708e-10,
+    "chi_unfreeze_at_t_lambda": 2.938194287929762,
+    "e_he_ground_nsc_ev": -77.4886734140625,
+    "e_he_ground_exp_ev": -79.005,
+    "he_first_ionization_nsc_ev": 23.065901414062502,
+    "he_first_ionization_exp_ev": 24.587,
+    "d_he_interatomic_m": 3.5788301140133446e-10,
+    "r_ws_cage_m": 2.2201290180737342e-10,
+    "q_zpe_cell_k": 14.008338445802897,
+    "q_zpe_k": 24.26728029293554,
+    "eps_vdw_k": 10.9,
+    "ratio_zpe_to_vdw": 2.2263559901775722,
+    "de_boer_lambda_star": 2.592057693087299,
+    "never_freezes_at_1atm": true,
+    "p_solid_nsc_atm": 25.095735532434833,
+    "p_solid_exp_atm": 25.0,
+    "t_bec_bare_k": 3.134380897434575,
+    "added_mass_factor_3_over_2": 1.5,
+    "t_lambda_added_mass_k": 2.0895872649563834,
+    "t_lambda_dressed_k": 2.1613246090055194,
+    "t_lambda_exp_k": 2.172,
+    "rel_diff_t_lambda": 0.004915005061915645,
+    "vortex_circulation_quantum_m2_s": 9.969302585366786e-08,
+    "de_broglie_ladder": [
+      {
+        "temperature_k": 300.0,
+        "regime": "Room-temperature gas (cloud slope 0.070 pm/K, localized particles, viscous)",
+        "lambda_db_m": 4.1836208032021386e-11,
+        "lambda_db_bare_m": 5.0381164398108695e-11,
+        "dlambda_dt_pm_per_k": 0.06972701338670231,
+        "delta_chi_from_r_he": 0.47412725163750585,
+        "volume_expansion_exp_3chi": 4.146985790943733,
+        "ratio_lambda_db_over_d_he": 0.11689911702767512,
+        "room_weaving_overlap": 1.439979371121247e-100,
+        "superfluid_zero_friction_fraction": 0.0
+      },
+      {
+        "temperature_k": 4.22,
+        "regime": "Normal liquid He-I boiling point (cloud slope 41.8 pm/K, 600x steeper)",
+        "lambda_db_m": 3.527416286401816e-10,
+        "lambda_db_bare_m": 4.2478835483787834e-10,
+        "dlambda_dt_pm_per_k": 41.794031829405405,
+        "delta_chi_from_r_he": 2.6061009249416465,
+        "volume_expansion_exp_3chi": 2485.683062051933,
+        "ratio_lambda_db_over_d_he": 0.9856339010308951,
+        "room_weaving_overlap": 0.039405866183211534,
+        "superfluid_zero_friction_fraction": 0.0
+      },
+      {
+        "temperature_k": 2.172,
+        "regime": "Superfluid lambda transition (Delta chi ~ 3 = chi_freeze, cloud weaves across cage)",
+        "lambda_db_m": 4.916805523289248e-10,
+        "lambda_db_bare_m": 5.921052577058708e-10,
+        "dlambda_dt_pm_per_k": 113.18613083078378,
+        "delta_chi_from_r_he": 2.938194287929762,
+        "volume_expansion_exp_3chi": 6731.699143400781,
+        "ratio_lambda_db_over_d_he": 1.3738583186826605,
+        "room_weaving_overlap": 0.1892982065544346,
+        "superfluid_zero_friction_fraction": 0.0
+      },
+      {
+        "temperature_k": 0.001,
+        "regime": "Millikelvin superfluid (cloud slope 1.15e7 pm/K, woven into container, zero friction)",
+        "lambda_db_m": 2.2914634859616928e-08,
+        "lambda_db_bare_m": 2.7594900214220315e-08,
+        "dlambda_dt_pm_per_k": 11457317.429808464,
+        "delta_chi_from_r_he": 6.7798961284566746,
+        "volume_expansion_exp_3chi": 681419299.0059853,
+        "ratio_lambda_db_over_d_he": 64.02828334849393,
+        "room_weaving_overlap": 0.9992339806077322,
+        "superfluid_zero_friction_fraction": 0.9999901210617996
+      },
+      {
+        "temperature_k": 1e-09,
+        "regime": "Nanokelvin BEC (macroscopic 0.023 mm wave woven into room floor 2R, F_friction = 0)",
+        "lambda_db_m": 2.2914634859616925e-05,
+        "lambda_db_bare_m": 2.7594900214220313e-05,
+        "dlambda_dt_pm_per_k": 1.1457317429808462e+16,
+        "delta_chi_from_r_he": 13.687651407438812,
+        "volume_expansion_exp_3chi": 6.814192990059852e+17,
+        "ratio_lambda_db_over_d_he": 64028.283348493926,
+        "room_weaving_overlap": 0.9999999992336871,
+        "superfluid_zero_friction_fraction": 0.9999999999999901
+      }
+    ]
+  },
   "theorem_1_facet_bridge": {
     "planck_length_m": 1.61625502392855e-35,
     "planck_mass_kg": 2.176434342051127e-08,
     "baryon_compton_wavelength_m": 2.1001941539004775e-16,
+    "proton_compton_wavelength_m": 2.103089102066989e-16,
     "n_1d_resolution_ratio": 1.2994200313732921e+19,
     "f_star_facet_capacity": 1.6884924179341675e+38,
     "n_star_baryon_capacity": 2.194060870685582e+57,
+    "n_1d_proton_resolution_ratio": 1.301211177030167e+19,
+    "f_star_proton_facet_capacity": 1.6931505272282325e+38,
+    "alpha_grav_proton_dimensionless": 5.906149417423905e-39,
     "f_nuclear_at_lambda_n_newton": 716766.9522726828,
     "f_grav_at_lambda_n_newton": 4.245011376181547e-33,
     "f_diluted_at_lambda_n_newton": 4.245011376181547e-33,
@@ -13,6 +110,7 @@
     "alpha_nuclear_bare": 1.0,
     "alpha_grav_dimensionless": 5.922442940096098e-39,
     "inv_f_star": 5.922442940096098e-39,
+    "isoperimetric_excess_at_f_star": 3.22263697183792e-38,
     "relative_bridge_residual": 0.0,
     "alpha_grav_bridge_residual": 0.0,
     "r_star_km": 2.7290343533513632,
@@ -37,7 +135,49 @@
     "sigma_spaghetti_normalized": 0.5,
     "lambda_3_snap_normalized": 8.0,
     "r_hadron_fm": 0.840077661560191,
-    "sigma_phys_mev_per_fm": 1118.4268591966133
+    "sigma_phys_mev_per_fm": 1118.4268591966133,
+    "potential_profile": [
+      {
+        "d_over_r_star": 0.0,
+        "delta_e_norm": 3.313708498984761
+      },
+      {
+        "d_over_r_star": 0.5,
+        "delta_e_norm": 1.7297686595137942
+      },
+      {
+        "d_over_r_star": 1.0,
+        "delta_e_norm": 0.34803390593273775
+      },
+      {
+        "d_over_r_star": 1.5,
+        "delta_e_norm": -0.6292906758684971
+      },
+      {
+        "d_over_r_star": 2.0,
+        "delta_e_norm": -1.0
+      },
+      {
+        "d_over_r_star": 3.0,
+        "delta_e_norm": -0.16666666666666663
+      },
+      {
+        "d_over_r_star": 4.0,
+        "delta_e_norm": 0.5
+      },
+      {
+        "d_over_r_star": 6.0,
+        "delta_e_norm": 1.6666666666666667
+      },
+      {
+        "d_over_r_star": 8.0,
+        "delta_e_norm": 2.75
+      },
+      {
+        "d_over_r_star": 10.0,
+        "delta_e_norm": 3.8
+      }
+    ]
   },
   "theorem_3_atomic_em": {
     "vol_3d_term_4pi3": 124.02510672119926,
@@ -50,12 +190,14 @@
     "bohr_radius_geom_m": 5.2917838717735644e-11,
     "bohr_radius_codata_m": 5.291772109405582e-11,
     "rydberg_energy_ev_geom": 13.605632620216108,
+    "rydberg_energy_ev_reduced_proton": 13.598226794441846,
     "shells": [
       {
         "n": 1,
         "r_n_over_a0": 1,
         "angular_states_n2": 1,
         "shell_capacity_2n2": 2,
+        "cumulative_capacity": 2,
         "energy_ev": -13.605632620216108
       },
       {
@@ -63,6 +205,7 @@
         "r_n_over_a0": 4,
         "angular_states_n2": 4,
         "shell_capacity_2n2": 8,
+        "cumulative_capacity": 10,
         "energy_ev": -3.401408155054027
       },
       {
@@ -70,6 +213,7 @@
         "r_n_over_a0": 9,
         "angular_states_n2": 9,
         "shell_capacity_2n2": 18,
+        "cumulative_capacity": 28,
         "energy_ev": -1.5117369578017898
       },
       {
@@ -77,6 +221,7 @@
         "r_n_over_a0": 16,
         "angular_states_n2": 16,
         "shell_capacity_2n2": 32,
+        "cumulative_capacity": 60,
         "energy_ev": -0.8503520387635067
       },
       {
@@ -84,6 +229,7 @@
         "r_n_over_a0": 25,
         "angular_states_n2": 25,
         "shell_capacity_2n2": 50,
+        "cumulative_capacity": 110,
         "energy_ev": -0.5442253048086443
       },
       {
@@ -91,6 +237,7 @@
         "r_n_over_a0": 36,
         "angular_states_n2": 36,
         "shell_capacity_2n2": 72,
+        "cumulative_capacity": 182,
         "energy_ev": -0.37793423945044746
       }
     ]
@@ -109,16 +256,25 @@
     "barrier_dressed_conductance": 1.0102560311647385e-05,
     "g_fermi_dimless_exp": 1.026826e-05,
     "rel_diff_g_fermi": 0.016137075644034653,
+    "g_axial_nsc": 1.2761423749153968,
+    "g_axial_exp": 1.2754,
+    "rel_diff_g_axial": 0.0005820722247112659,
+    "spin_handedness_factor_1_plus_3ga2": 5.885618083164127,
+    "f_phase_wilkinson": 1.71485,
     "tau_nuclear_s": 7.005493626862613e-25,
-    "tau_vent_estimate_s": 31904.540869486482
+    "tau_vent_estimate_s": 881.9594583273786,
+    "tau_vent_with_exp_gf_s": 877.9964243390395,
+    "tau_neutron_exp_s": 877.75
   },
   "theorem_5_nuclear_fission": {
     "a_vol_mev": 15.592735942171446,
     "a_surf_mev": 17.22326053799956,
     "a_coul_mev": 0.7272230738713704,
     "a_asym_mev": 23.38910391325717,
+    "a_pair_mev": 11.694551956628585,
     "r_0_fm": 1.1880492224250971,
     "fissility_crit_z2_over_a": 47.36720040059117,
+    "fissility_crit_upper_z2_over_a": 48.41502798193028,
     "neck_cubic_root_p_plus": 2.1038034027355366,
     "binary_fission_release_fraction": 0.29289321881345254,
     "sample_nuclei": [
@@ -126,7 +282,9 @@
         "nucleus": "He-4",
         "A": 4,
         "Z": 2,
-        "B_per_A_mev": 6.013700777661825,
+        "Z_star_beta_valley": 1.9983009942333703,
+        "B_per_A_mev": 5.975519772240398,
+        "B_per_A_emp_mev": 7.074,
         "Z2_over_A": 1.0,
         "fissility_ratio_x": 0.02111165514412626
       },
@@ -134,7 +292,9 @@
         "nucleus": "C-12",
         "A": 12,
         "Z": 6,
-        "B_per_A_mev": 7.564349265686864,
+        "Z_star_beta_valley": 5.8643857702591715,
+        "B_per_A_mev": 7.557001327767534,
+        "B_per_A_emp_mev": 7.68,
         "Z2_over_A": 3.0,
         "fissility_ratio_x": 0.06333496543237878
       },
@@ -142,7 +302,9 @@
         "nucleus": "O-16",
         "A": 16,
         "Z": 8,
-        "B_per_A_mev": 7.9350851296666365,
+        "Z_star_beta_valley": 7.7526312174939624,
+        "B_per_A_mev": 7.930312503988958,
+        "B_per_A_emp_mev": 7.976,
         "Z2_over_A": 4.0,
         "fissility_ratio_x": 0.08444662057650504
       },
@@ -150,7 +312,9 @@
         "nucleus": "Fe-56",
         "A": 56,
         "Z": 26,
-        "B_per_A_mev": 8.793945365563912,
+        "Z_star_beta_valley": 25.5383028206301,
+        "B_per_A_mev": 8.793216486783455,
+        "B_per_A_emp_mev": 8.79,
         "Z2_over_A": 12.071428571428571,
         "fissility_ratio_x": 0.2548478370969527
       },
@@ -158,7 +322,9 @@
         "nucleus": "Ni-62",
         "A": 62,
         "Z": 28,
-        "B_per_A_mev": 8.806204022742078,
+        "Z_star_beta_valley": 28.071328642657267,
+        "B_per_A_mev": 8.805578346285625,
+        "B_per_A_emp_mev": 8.795,
         "Z2_over_A": 12.64516129032258,
         "fissility_ratio_x": 0.26696028440314495
       },
@@ -166,7 +332,9 @@
         "nucleus": "Pb-208",
         "A": 208,
         "Z": 82,
-        "B_per_A_mev": 7.723862835267285,
+        "Z_star_beta_valley": 82.94124571684634,
+        "B_per_A_mev": 7.723761013098057,
+        "B_per_A_emp_mev": 7.867,
         "Z2_over_A": 32.32692307692308,
         "fissility_ratio_x": 0.682474851870697
       },
@@ -174,7 +342,9 @@
         "nucleus": "U-235",
         "A": 235,
         "Z": 92,
+        "Z_star_beta_valley": 92.03043227230995,
         "B_per_A_mev": 7.501857153789671,
+        "B_per_A_emp_mev": 7.591,
         "Z2_over_A": 36.01702127659574,
         "fissility_ratio_x": 0.7603789325101474
       },
@@ -182,7 +352,9 @@
         "nucleus": "U-238",
         "A": 238,
         "Z": 92,
-        "B_per_A_mev": 7.484840959345917,
+        "Z_star_beta_valley": 93.02435920858905,
+        "B_per_A_mev": 7.484757769195049,
+        "B_per_A_emp_mev": 7.57,
         "Z2_over_A": 35.563025210084035,
         "fissility_ratio_x": 0.7507943241171624
       },
@@ -190,7 +362,9 @@
         "nucleus": "Cf-252",
         "A": 252,
         "Z": 98,
-        "B_per_A_mev": 7.3708656444922385,
+        "Z_star_beta_valley": 97.62238154419215,
+        "B_per_A_mev": 7.370789289658413,
+        "B_per_A_emp_mev": 7.469,
         "Z2_over_A": 38.111111111111114,
         "fissility_ratio_x": 0.8045886349372564
       }
@@ -228,14 +402,22 @@
     },
     {
       "tier": 4,
-      "name": "Atomic 1D Phase-Loop Shell Scale",
+      "name": "Atomic 1D Phase-Loop Shell",
       "scale_m": 5.2917838717735644e-11,
       "effective_coupling": 0.007297336344064641,
-      "textbook_label": "Electromagnetic Force & Atomic Shells",
-      "nsc_mechanism": "3D-to-1D impedance (4 pi^3 + pi^2 + pi)^-1 = 1/137.036; shells r_n = n^2 a_0, 2n^2"
+      "textbook_label": "Electromagnetic Force & Periodic Atomic Shells",
+      "nsc_mechanism": "3D-to-1D impedance (4 pi^3 + pi^2 + pi)^-1 = 1/137.0363; Bohr shells r_n = n^2 a_0, capacities 2n^2"
     },
     {
       "tier": 5,
+      "name": "Helium-4 Absolute-Zero Floor Weave",
+      "scale_m": 5.921052577058708e-10,
+      "effective_coupling": 2.938194287929762,
+      "textbook_label": "Superfluidity & Wave-Particle Floor Bridge",
+      "nsc_mechanism": "Logarithmic cooling widens He-4 cloud exponentially (e^3 R_He = 6.30 A, T_lambda = 2.161 K), weaving into room span 2R (eta = 0)"
+    },
+    {
+      "tier": 6,
       "name": "Stellar Planck-Facet Saturation Scale",
       "scale_m": 10916.137413405453,
       "effective_coupling": 5.922442940096098e-39,
@@ -243,7 +425,7 @@
       "nsc_mechanism": "Nuclear pressure diluted over F_star = (lambda_n/ell_P)^2 = 1.688e38 Planck facets"
     },
     {
-      "tier": 6,
+      "tier": 7,
       "name": "Galactic Virial Halo & 0-Valve Anchor Scale",
       "scale_m": 3e+20,
       "effective_coupling": 0.238134,
@@ -251,7 +433,7 @@
       "nsc_mechanism": "3:1 exterior potential flow (75% surrounding) + two-sided 0-horizon anchor load"
     },
     {
-      "tier": 7,
+      "tier": 8,
       "name": "Absolute-Zero Room Floor (Outer Birth 0-Valve)",
       "scale_m": 2.7601046284578545e+26,
       "effective_coupling": 0.708827,

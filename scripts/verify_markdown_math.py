@@ -44,16 +44,19 @@ def main() -> int:
     for rel in FILES:
         p = ROOT / rel
         text = p.read_text(encoding="utf-8")
-        if do_fix:
+        if do_fix and rel != "AGENTS.md":
             fixed = _brace_inline_subscripts(text)
             if fixed != text:
-                p.write_text(fixed, encoding="utf-8")
+                p.write_text(fixed, encoding="utf-8", newline="\n")
                 text = fixed
+        disp_blocks = re.findall(r"\$\$(.*?)\$\$", text, flags=re.S)
         no_disp = re.sub(r"\$\$.*?\$\$", "", text, flags=re.S)
         inlines = re.findall(r"(?<!\$)\$(?!\$)([^\$\n]+?)\$(?!\$)", no_disp)
-        stars = [m for m in inlines if "*" in m]
-        percs = [m for m in inlines if "%" in m]
-        thin = [m for m in inlines if r"\," in m]
+        all_math = inlines + disp_blocks
+        stars = [m for m in all_math if "*" in m]
+        percs = [m for m in all_math if "%" in m]
+        thin = [m for m in all_math if r"\," in m]
+        punct_u = [m for m in all_math if re.search(r"[\}\|\)\]\']_", m)]
         bad_u = [
             m
             for m in inlines
@@ -62,15 +65,17 @@ def main() -> int:
         disp_ops = re.findall(r"\\operatorname", text)
         link_math = re.findall(r"\[[^\]]*\$[^\]]*\]\([^\)]+\)", text)
         print(
-            f"{rel}: inline={len(inlines)}, *={len(stars)}, %={len(percs)}, "
-            f"thin={len(thin)}, bad_={len(bad_u)}, op={len(disp_ops)}, link_math={len(link_math)}"
+            f"{rel}: inline={len(inlines)}, disp={len(disp_blocks)}, *={len(stars)}, "
+            f"%={len(percs)}, thin={len(thin)}, punct_={len(punct_u)}, bad_={len(bad_u)}, "
+            f"op={len(disp_ops)}, link_math={len(link_math)}"
         )
-        if stars or percs or thin or bad_u or disp_ops or link_math:
+        if stars or percs or thin or punct_u or bad_u or disp_ops or link_math:
             failed = True
             for label, items in [
                 ("stars", stars),
                 ("percs", percs),
                 ("thin", thin),
+                ("punct_u", punct_u),
                 ("bad_u", bad_u),
                 ("disp_ops", disp_ops),
                 ("link_math", link_math),

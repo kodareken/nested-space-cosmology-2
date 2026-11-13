@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this framework or its calculations, cite this repository, Nested-Space Cosmology I (10.5281/zenodo.23890258), and the primary sources for the established physics you rely on."
+title: "Nested-Space Cosmology II: Force at Resolutions"
+type: software
+version: 0.2.0
+date-released: 2026-11-05
+authors:
+  - given-names: "Douglas"
+    family-names: "Ek"
+license: MIT
+repository-code: "https://github.com/kodareken/nested-space-cosmology-2"
+keywords:
+  - nested-space cosmology
+  - force unification
+  - wave-particle duality
+  - superfluid helium-4
+  - nuclear confinement
+  - fine-structure constant
+  - beta decay
+  - nuclear fission
+  - spectral geometry
+  - computational physics
+preferred-citation:
+  type: report
+  title: "Nested-Space Cosmology: The Geometry of a Universe II — Force at Resolutions"
+  authors:
+    - given-names: "Douglas"
+      family-names: "Ek"
+  year: 2026
+  date-released: 2026-11-05
+  version: "0.2.0"
+  url: "https://github.com/kodareken/nested-space-cosmology-2/blob/main/paper/nested-space-cosmology-2.pdf"
+  notes: "Foundation Edition II manuscript (Version 0.2.0), sequel to Nested-Space Cosmology I (Version 0.27.0, Zenodo 10.5281/zenodo.23890258). AI collaborators materially assisted with mathematical formulation, software, computation, drafting, comparison, and auditing; Douglas Ek retains scientific and publication responsibility."

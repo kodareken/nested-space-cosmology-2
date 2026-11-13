@@ -1,0 +1,30 @@
+{
+  "bytes": 1873134,
+  "metadata": "paper/metadata.json",
+  "metadata_sha256": "6c7e947b0e161eed319790a1d08e6460020aaebd7be5e2935c986cf6019348a0",
+  "output": "paper/nested-space-cosmology-2.pdf",
+  "pages": 19,
+  "pdf_sha256": "a0cd70bcd6463cef0ffb2309ab016bd5d7c434413b05d0019f63a62314276fe8",
+  "schema": "NSC-PAPER-2-BUILD-v1",
+  "scientific_build_inputs": [
+    {
+      "path": "paper/figures/nsc-force-at-resolutions-atlas.png",
+      "sha256": "4cb520a29d9532e3e527f50437800d56fcf2d231e4ee41380c58de3fde55e655"
+    },
+    {
+      "path": "paper/figures/nsc-helium-floor-and-fission-neck.png",
+      "sha256": "4e428f01ee658b8cc60c7e88b47211823963074212ec9b21d28d72f39b02a2c4"
+    },
+    {
+      "path": "results/nsc-force-at-resolutions-v1.json",
+      "sha256": "64619951aa8a0025cc892bfa73d9e05fa3918a0d5695432c9a26f089face3835"
+    },
+    {
+      "path": "scripts/build_paper_2.py",
+      "sha256": "13bbab5f475dfe16115e49b30991d4b562fbfe5c5dba6b09909b1f9c7fa5104e"
+    }
+  ],
+  "source": "paper/nested-space-cosmology-2.md",
+  "source_sha256": "17fce76e22bc2d59a6260a4ffc23c52f62ee04306e5210f9c6a671e37c4cfd71",
+  "version": "0.2.0 (2026-11-05)"
+}
